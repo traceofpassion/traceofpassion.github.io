@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>이형선 데이터 과학 블로그</title>
+    <title>DATABRARY</title>
     <link>https://traceofpassion.github.io/</link>
-    <description>Recent content on 이형선 데이터 과학 블로그</description>
+    <description>Recent content on DATABRARY</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/index.xml" rel="self" type="application/rss+xml" />
