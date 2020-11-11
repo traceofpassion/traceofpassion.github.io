@@ -25,23 +25,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>카테고리1</title>
-      <link>/categories/%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC1/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>카테고리2</title>
-      <link>/categories/%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC2/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC2/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

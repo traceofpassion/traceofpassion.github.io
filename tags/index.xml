@@ -52,23 +52,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>태그1</title>
-      <link>/tags/%ED%83%9C%EA%B7%B81/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/%ED%83%9C%EA%B7%B81/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>태그2</title>
-      <link>/tags/%ED%83%9C%EA%B7%B82/</link>
-      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/%ED%83%9C%EA%B7%B82/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
