@@ -7,26 +7,26 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.78.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="H.S Lee">
-<meta name="keywords" content="블로그">
-<meta name="description" content="초기 설정하기">
+<meta name="keywords" content="블로그, 블로그다운, blogdown, tranquilpeak, font awesome">
+<meta name="description" content="config.toml 설정하기">
 
 
-<meta property="og:description" content="초기 설정하기">
+<meta property="og:description" content="config.toml 설정하기">
 <meta property="og:type" content="article">
-<meta property="og:title" content="R로 블로그 만들기(2) - 초기 설정하기">
-<meta name="twitter:title" content="R로 블로그 만들기(2) - 초기 설정하기">
+<meta property="og:title" content="R로 블로그 만들기(2) - config.toml 설정하기">
+<meta name="twitter:title" content="R로 블로그 만들기(2) - config.toml 설정하기">
 <meta property="og:url" content="https://traceofpassion.github.io/2020/blog-making-02/">
 <meta property="twitter:url" content="https://traceofpassion.github.io/2020/blog-making-02/">
 <meta property="og:site_name" content="HS-DATABLOG">
-<meta property="og:description" content="초기 설정하기">
-<meta name="twitter:description" content="초기 설정하기">
+<meta property="og:description" content="config.toml 설정하기">
+<meta name="twitter:description" content="config.toml 설정하기">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2020-11-11T00:00:00">
+    <meta property="article:published_time" content="2020-11-12T00:00:00">
   
   
-    <meta property="article:modified_time" content="2020-11-11T00:00:00">
+    <meta property="article:modified_time" content="2020-11-12T00:00:00">
   
   
   
@@ -40,6 +40,14 @@
     
       <meta property="article:tag" content="블로그">
     
+      <meta property="article:tag" content="블로그다운">
+    
+      <meta property="article:tag" content="blogdown">
+    
+      <meta property="article:tag" content="tranquilpeak">
+    
+      <meta property="article:tag" content="font awesome">
+    
   
 
 
@@ -51,6 +59,9 @@
 
 
 
+  <meta property="og:image" content="https://res.cloudinary.com/traceofpassion/image/upload/v1605163814/post/blog_making/blog_thumbnail_ov1duz.jpg">
+  <meta property="twitter:image" content="https://res.cloudinary.com/traceofpassion/image/upload/v1605163814/post/blog_making/blog_thumbnail_ov1duz.jpg">
+
 
 
 
@@ -59,7 +70,7 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=640">
 
 
-    <title>R로 블로그 만들기(2) - 초기 설정하기</title>
+    <title>R로 블로그 만들기(2) - config.toml 설정하기</title>
 
     <link rel="icon" href="https://res.cloudinary.com/traceofpassion/image/upload/v1605001308/setting/favicon_phj3px.png">
     
@@ -229,15 +240,15 @@ if (!doNotTrack) {
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      R로 블로그 만들기(2) - 초기 설정하기
+      R로 블로그 만들기(2) - config.toml 설정하기
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-11-11T00:00:00Z">
+      <time itemprop="datePublished" datetime="2020-11-12T00:00:00Z">
         
-  November 11, 2020
+  November 12, 2020
 
       </time>
     
@@ -258,11 +269,100 @@ if (!doNotTrack) {
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <pre><code class="language-{bash" data-lang="{bash">$ cd TestBlog
-$ git add .
-$ git commit -m &quot;first commit&quot;
-$ git push origin master
-</code></pre>
+              <h1 id="3단계-configtoml-설정하기">3단계. config.toml 설정하기</h1>
+<ul>
+<li>아래 내용에 <strong>포함되지 않는 모든 코드는 별도의 수정을 하지 않았으니 default값을 유지</strong>한다.</li>
+</ul>
+<h2 id="3-1">3-1</h2>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605179210/post/blog_making/config01_iczmra.png" alt="3-1"></p>
+<ul>
+<li>프로젝트 파일 실행 후, 불러오기로 config.toml 파일을 실행한다.</li>
+<li>config은 configuration의 줄임말로, &lsquo;구성&rsquo;을 뜻한다. 사이트의 여러 가지 구성 요소를 설정하는 파일이다.</li>
+</ul>
+<h2 id="3-2">3-2</h2>
+<pre><code class="language-{go" data-lang="{go"># I STRONGLY recommend you to use a CDN to speed up loading of pages.
+# There is many free CDN like Cloudinary or you can also use indirectly
+# by using services like Google Photos.
+</code></pre><ul>
+<li>가장 위에 있는 주석을 먼저 살펴보자. 이 테마의 저자는 <a href="https://ko.wikipedia.org/wiki/%EC%BD%98%ED%85%90%EC%B8%A0_%EC%A0%84%EC%86%A1_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC">CDN</a> 방식을 사용해서 페이지를 업로드하기를 추천한다. CDN은 Content Distribution Network의 줄임말로, 인터넷으로 여러 노드를 가진 네트워크에 데이터를 저장하여 제공하는 시스템이다. 한 마디로, 구글 포토, icloud 등의 클라우드 방식으로 제공되는 데이터를 의미한다. 저자는 속도 향상을 위해 CDN 방식을 사용할 것을 추천한다. 필자 또한 저자가 추천하는 Cloudinary를 통해 이미지 데이터를 제공한다.</li>
+</ul>
+<h2 id="3-3">3-3</h2>
+<pre><code class="language-{go" data-lang="{go">baseURL = &quot;/&quot;
+title = &quot;Test Blog&quot;
+# disqusShortname = &quot;&quot;
+# googleAnalytics = &quot;&quot;
+</code></pre><ul>
+<li><code>baseURL</code>: 문서의 기본 url. 일단은 &ldquo;/&ldquo;로 설정.</li>
+<li><code>title</code>: 블로그의 제목. 필자는 &ldquo;Test Blog&quot;로 설정.</li>
+<li><code>disqusShortname</code>: 댓글 기능을 추가할 수 있는 disqus의 ID. 현재는 반영되지 않도록 주석 처리. 추후에 커스터마이징에서 다룰 예정.</li>
+<li><code>googleAnalytics</code>: 사이트의 트래픽을 측정할 수 있는 구글애널리틱스의 ID. 현재는 반영되지 않도록 주석 처리. 추후에 커스터마이징에서 다룰 예정.</li>
+</ul>
+<h2 id="3-4">3-4</h2>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605179211/post/blog_making/config02_gahwlv.png" alt="3-4"></p>
+<pre><code class="language-{go" data-lang="{go">[author]
+  name = &quot;나폴레옹&quot;
+  bio = &quot;내 사전에는 불가능이란 없다.&quot;
+  job = &quot;황제&quot;
+  location = &quot;프랑스&quot;
+  # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
+  # gravatarEmail = &quot;thibaud.lepretre@gmail.com&quot;
+  # Your profile picture
+  # Overwritten by your gravatar image if `author.gravatarEmail` is filled
+  picture = &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg/192px-Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg&quot;
+</code></pre><ul>
+<li><code>name</code>: 블로그 저자의 이름</li>
+<li><code>bio</code>: 자신을 소개하는 문구</li>
+<li><code>job</code>: 직업</li>
+<li><code>location</code>: 사는 곳</li>
+<li><code>gravatarEmail</code> or <code>picture</code>: 프로필 사진을 설정하는 2가지 방법
+<ul>
+<li><code>gravatarEmail</code>: gravatar 사이트에 회원가입 후 프로필 이미지를 업로드한다. 가입한 계정을 config.toml에 표기하면 자동 연동</li>
+<li><code>picture</code>: 본인이 설정한 이미지 업로드한다. 필자는 CDN 방식으로 구글에 이미지를 검색하여 그 주소를 연동했다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-5">3-5</h2>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605179211/post/blog_making/config03_vopzpk.png" alt="3-5"></p>
+<pre><code class="language-{go" data-lang="{go">[[menu.links]]
+  weight = 1
+  identifier = &quot;github&quot;
+  name = &quot;GitHub&quot;
+  pre = &quot;&lt;i class=\&quot;sidebar-button-icon fa fa-lg fa-github\&quot;&gt;&lt;/i&gt;&quot;
+  url = &quot;https://github.com/traceofpassion&quot;
+[[menu.links]]
+  weight = 2
+  identifier = &quot;facebook&quot;
+  name = &quot;Facebook&quot;
+  pre = &quot;&lt;i class=\&quot;sidebar-button-icon fa fa-lg fa-facebook\&quot;&gt;&lt;/i&gt;&quot;
+  url = &quot;https://www.facebook.com/hyeongsun.lee/&quot;
+</code></pre><ul>
+<li><code>github url</code>: 자신의 깃헙 프로필 주소로 설정</li>
+<li><code>linkedin url</code>: 원래는 stackoverflow가 default값이나, 필자는 이 사이트를 사용하지 않아 facebook으로 변경했다.
+<ul>
+<li><code>identifier</code>와 <code>name</code>의 이름을 변경한다.</li>
+<li><a href="https://fontawesome.com/icons?d=gallery">Font Awesome Icons</a>에 해당 사이트의 아이콘 이미지가 있는지 확인하고, 이름을 확인한다. fa-(바꿀 아이콘의 이름)으로 변경한다.</li>
+<li>해당 주소로 설정한다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-6">3-6</h2>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605179211/post/blog_making/config04_ttxmwh.png" alt="3-6"></p>
+<pre><code class="language-{go" data-lang="{go"># 블로그 소개글
+  description = &quot;나폴레옹의 테스트 블로그입니다.&quot;
+
+# Copyright
+[params.footer]
+copyright = &quot;&lt;a href=\&quot;https://github.com/traceofpassion\&quot;&gt;나폴레옹&lt;/a&gt;&quot;
+</code></pre><ul>
+<li><code>description</code>: 블로그 소개글. 링크를 카카오톡에 공유할 때 블로그 이름 밑에 적히는 문구이다.</li>
+<li><code>copyright</code>: 저작권 명시. 법적 효력이 있는지는 모르겠다.</li>
+</ul>
+<h2 id="3-7">3-7</h2>
+<pre><code class="language-{r" data-lang="{r">blogdown::build_site()
+</code></pre><ul>
+<li>최종적으로 콘솔에 build_site() 함수를 통해 수정한 config.toml을 반영하여 사이트를 재구성한다. build_site()는 게시글을 작성한 후에도 지속적으로 사용되니 기억해두도록 한다.</li>
+</ul>
+
               
             </div>
           </div>
@@ -276,6 +376,14 @@ $ git push origin master
                     
   <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/">블로그</a>
 
+  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%8B%A4%EC%9A%B4/">블로그다운</a>
+
+  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/blogdown/">blogdown</a>
+
+  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/tranquilpeak/">tranquilpeak</a>
+
+  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/font-awesome/">font awesome</a>
+
                   </div>
                 
               
@@ -287,7 +395,7 @@ $ git push origin master
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-01/" data-tooltip="R로 블로그 만들기(1) - 깃(git)과 블로그다운(blogdown) 패키지">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -295,7 +403,7 @@ $ git push origin master
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/k-series/" data-tooltip="클러스터링 K-3형제">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-01/" data-tooltip="R로 블로그 만들기(1) - 깃(git)과 블로그다운(blogdown) 패키지">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -373,7 +481,7 @@ $ git push origin master
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-01/" data-tooltip="R로 블로그 만들기(1) - 깃(git)과 블로그다운(blogdown) 패키지">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -381,7 +489,7 @@ $ git push origin master
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/k-series/" data-tooltip="클러스터링 K-3형제">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-01/" data-tooltip="R로 블로그 만들기(1) - 깃(git)과 블로그다운(blogdown) 패키지">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>

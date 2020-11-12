@@ -6,13 +6,49 @@
     <description>Recent content in Tags on HS-DATABLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>blogdown</title>
       <link>https://traceofpassion.github.io/tags/blogdown/</link>
-      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://traceofpassion.github.io/tags/blogdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>font awesome</title>
+      <link>https://traceofpassion.github.io/tags/font-awesome/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/tags/font-awesome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tranquilpeak</title>
+      <link>https://traceofpassion.github.io/tags/tranquilpeak/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/tags/tranquilpeak/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>블로그</title>
+      <link>https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>블로그다운</title>
+      <link>https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%8B%A4%EC%9A%B4/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%8B%A4%EC%9A%B4/</guid>
       <description></description>
     </item>
     
@@ -44,15 +80,6 @@
     </item>
     
     <item>
-      <title>tranquilpeak</title>
-      <link>https://traceofpassion.github.io/tags/tranquilpeak/</link>
-      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://traceofpassion.github.io/tags/tranquilpeak/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>군집분석</title>
       <link>https://traceofpassion.github.io/tags/%EA%B5%B0%EC%A7%91%EB%B6%84%EC%84%9D/</link>
       <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
@@ -67,24 +94,6 @@
       <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://traceofpassion.github.io/tags/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>블로그</title>
-      <link>https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/</link>
-      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>블로그다운</title>
-      <link>https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%8B%A4%EC%9A%B4/</link>
-      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%8B%A4%EC%9A%B4/</guid>
       <description></description>
     </item>
     

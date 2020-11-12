@@ -6,7 +6,16 @@
     <description>Recent content in tranquilpeak on HS-DATABLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/tranquilpeak/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/tranquilpeak/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(2) - config.toml 설정하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-02/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-02/</guid>
+      <description>3단계. config.toml 설정하기  아래 내용에 포함되지 않는 모든 코드는 별도의 수정을 하지 않았으니 default값을 유지한다.  3-1  프로젝트 파일 실행 후, 불러오기로 config.toml 파일을 실행한다. config은 configuration의 줄임말로, &amp;lsquo;구성&amp;rsquo;을 뜻한다. 사이트의 여러 가지 구성 요소를 설정하는 파일이다.  3-2 # I STRONGLY recommend you to use a CDN to speed up loading of pages.# There is many free CDN like Cloudinary or you can also use indirectly# by using services like Google Photos.</description>
+    </item>
+    
     <item>
       <title>R로 블로그 만들기(1) - 깃(git)과 블로그다운(blogdown) 패키지</title>
       <link>https://traceofpassion.github.io/2020/blog-making-01/</link>
