@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on DATABRARY</title>
+    <title>Categories on HS-DATABLOG</title>
     <link>https://traceofpassion.github.io/categories/</link>
-    <description>Recent content in Categories on DATABRARY</description>
+    <description>Recent content in Categories on HS-DATABLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
@@ -22,6 +22,24 @@
       <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://traceofpassion.github.io/categories/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>블로그</title>
+      <link>https://traceofpassion.github.io/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/</link>
+      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>시작하기</title>
+      <link>https://traceofpassion.github.io/categories/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/categories/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</guid>
       <description></description>
     </item>
     
