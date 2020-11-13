@@ -6,7 +6,16 @@
     <description>Recent content in Posts on HS-DATABLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-04/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-04/</guid>
+      <description>5단계. 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기 </description>
+    </item>
+    
     <item>
       <title>R로 블로그 만들기(3) - Netlify로 사이트 배포하기</title>
       <link>https://traceofpassion.github.io/2020/blog-making-03/</link>
