@@ -7,33 +7,33 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.78.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="H.S Lee">
-<meta name="keywords" content="블로그, 블로그다운, blogdown, netlify">
-<meta name="description" content="Netlify로 사이트 배포하기">
+<meta name="keywords" content="블로그, 블로그다운">
+<meta name="description" content="Latex으로 수식 삽입과 Cloudinary로 이미지 넣기">
 
 
-<meta property="og:description" content="Netlify로 사이트 배포하기">
+<meta property="og:description" content="Latex으로 수식 삽입과 Cloudinary로 이미지 넣기">
 <meta property="og:type" content="article">
-<meta property="og:title" content="R로 블로그 만들기(3) - Netlify로 사이트 배포하기">
-<meta name="twitter:title" content="R로 블로그 만들기(3) - Netlify로 사이트 배포하기">
-<meta property="og:url" content="https://traceofpassion.github.io/2020/blog-making-03/">
-<meta property="twitter:url" content="https://traceofpassion.github.io/2020/blog-making-03/">
+<meta property="og:title" content="R로 블로그 만들기(5) - Latex으로 수식 삽입과 Cloudinary로 이미지 넣기">
+<meta name="twitter:title" content="R로 블로그 만들기(5) - Latex으로 수식 삽입과 Cloudinary로 이미지 넣기">
+<meta property="og:url" content="https://traceofpassion.github.io/2020/blog-making-05/">
+<meta property="twitter:url" content="https://traceofpassion.github.io/2020/blog-making-05/">
 <meta property="og:site_name" content="HS-DATABLOG">
-<meta property="og:description" content="Netlify로 사이트 배포하기">
-<meta name="twitter:description" content="Netlify로 사이트 배포하기">
+<meta property="og:description" content="Latex으로 수식 삽입과 Cloudinary로 이미지 넣기">
+<meta name="twitter:description" content="Latex으로 수식 삽입과 Cloudinary로 이미지 넣기">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2020-11-12T00:00:00">
+    <meta property="article:published_time" content="2020-11-14T00:00:00">
   
   
-    <meta property="article:modified_time" content="2020-11-12T00:00:00">
+    <meta property="article:modified_time" content="2020-11-14T00:00:00">
   
   
   
     
       <meta property="article:section" content="블로그">
     
-      <meta property="article:section" content="시작하기">
+      <meta property="article:section" content="커스터마이징">
     
   
   
@@ -41,10 +41,6 @@
       <meta property="article:tag" content="블로그">
     
       <meta property="article:tag" content="블로그다운">
-    
-      <meta property="article:tag" content="blogdown">
-    
-      <meta property="article:tag" content="netlify">
     
   
 
@@ -68,14 +64,14 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=640">
 
 
-    <title>R로 블로그 만들기(3) - Netlify로 사이트 배포하기</title>
+    <title>R로 블로그 만들기(5) - Latex으로 수식 삽입과 Cloudinary로 이미지 넣기</title>
 
     <link rel="icon" href="https://res.cloudinary.com/traceofpassion/image/upload/v1605001308/setting/favicon_phj3px.png">
     
 
     
 
-    <link rel="canonical" href="https://traceofpassion.github.io/2020/blog-making-03/">
+    <link rel="canonical" href="https://traceofpassion.github.io/2020/blog-making-05/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -238,15 +234,15 @@ if (!doNotTrack) {
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      R로 블로그 만들기(3) - Netlify로 사이트 배포하기
+      R로 블로그 만들기(5) - Latex으로 수식 삽입과 Cloudinary로 이미지 넣기
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-11-12T00:00:00Z">
+      <time itemprop="datePublished" datetime="2020-11-14T00:00:00Z">
         
-  November 12, 2020
+  November 14, 2020
 
       </time>
     
@@ -257,7 +253,7 @@ if (!doNotTrack) {
     
       <a class="category-link" href="https://traceofpassion.github.io/categories/%eb%b8%94%eb%a1%9c%ea%b7%b8">블로그</a>, 
     
-      <a class="category-link" href="https://traceofpassion.github.io/categories/%ec%8b%9c%ec%9e%91%ed%95%98%ea%b8%b0">시작하기</a>
+      <a class="category-link" href="https://traceofpassion.github.io/categories/%ec%bb%a4%ec%8a%a4%ed%84%b0%eb%a7%88%ec%9d%b4%ec%a7%95">커스터마이징</a>
     
   
 
@@ -267,68 +263,7 @@ if (!doNotTrack) {
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h1 id="4단계-netlify로-사이트-배포하기">4단계. Netlify로 사이트 배포하기</h1>
-<h2 id="4-1">4-1.</h2>
-<pre><code class="language-{bash" data-lang="{bash">$ cd TestBlog # 본인의 레포지토리 경로
-$ git add .
-$ git commit -m &quot;first commit&quot;
-$ git push origin master
-</code></pre><ul>
-<li>지금까지의 내용을 커밋한 후, origin(깃헙)의 master 브랜치에 푸시합니다.</li>
-</ul>
-<h2 id="4-2">4-2.</h2>
-<ul>
-<li><a href="https://www.netlify.com/">Netlify</a>는 정적 사이트의 호스팅과 백엔드를 제공하는 서비스입니다. 한 마디로, 제작한 블로그에 링크를 달아주는 역할을 하는 친구입니다.</li>
-<li>GitHub 계정으로 Netlify의 회원가입을 마칩니다.</li>
-</ul>
-<h2 id="4-3">4-3.</h2>
-<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605194137/post/blog_making/netlify01_f0hnvq.png" alt="4-3-1"></p>
-<ul>
-<li>로그인을 마치고 나면 다음과 같은 화면이 나옵니다. 여기서 <code>New site from Git</code>을 클릭합니다.</li>
-</ul>
-<hr>
-<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605194137/post/blog_making/netlify02_qtoajd.png" alt="4-3-2"></p>
-<ul>
-<li><code>Github</code>을 클릭합니다.</li>
-</ul>
-<hr>
-<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605194137/post/blog_making/netlify03_sv31xm.png" alt="4-3-3"></p>
-<ul>
-<li>Github 팝업창으로 이동하고, 다음과 같이 블로그 작업을 하는 레포지토리를 추가합니다.</li>
-</ul>
-<hr>
-<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605194137/post/blog_making/netlify04_yi7ggq.png" alt="4-3-4"></p>
-<ul>
-<li>다시 Netlify 창으로 돌아와서 다음과 같이 해당 레포지토리를 설정합니다.</li>
-</ul>
-<hr>
-<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605194137/post/blog_making/netlify05_cgpk7q.png" alt="4-3-5"></p>
-<ul>
-<li>브랜치는 master, command는 hugo, publish 디렉토리는 public으로 설정합니다.</li>
-<li>master 브랜치의 public 폴더를 hugo로 빌드하여 배포한다는 의미입니다.</li>
-</ul>
-<hr>
-<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605194137/post/blog_making/netlify06_jyjnq0.png" alt="4-3-6"></p>
-<ul>
-<li>사이트의 이름이 임의로 설정이 되었습니다. 사이트 이름을 변경하기 위해 <code>Site settings</code>를 클릭합니다.</li>
-</ul>
-<hr>
-<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605194138/post/blog_making/netlify07_gkvo5u.png" alt="4-3-7"></p>
-<ul>
-<li><code>Change site name</code>을 클릭하여 사이트 이름을 변경합니다.</li>
-</ul>
-<hr>
-<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605194138/post/blog_making/netlify08_wehhkp.png" alt="4-3-8"></p>
-<ul>
-<li><code>mytestblog</code>로 사이트 이름을 변경했습니다. 사이트 이름은 고유한 값으로 mytestblog는 중복되어 이제 설정이 더 이상 불가능합니다.</li>
-</ul>
-<h2 id="4-4">4-4.</h2>
-<ul>
-<li><a href="https://mytestblog.netlify.app">https://mytestblog.netlify.app</a> 에 접속하여 블로그의 상태를 확인합니다.</li>
-</ul>
-<h2 id="4-5">4-5.</h2>
-<pre><code class="language-{go" data-lang="{go">baseURL = &quot;https://mytestblog.netlify.app/&quot;
-</code></pre><p>마지막으로, 이 주소를 config.toml의 baseURL에 반영하도록 합니다.</p>
+              <h1 id="6단계-latex으로-수식-삽입과-cloudinary로-이미지-넣기">6단계. Latex으로 수식 삽입과 Cloudinary로 이미지 넣기</h1>
 
               
             </div>
@@ -345,10 +280,6 @@ $ git push origin master
 
   <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%8B%A4%EC%9A%B4/">블로그다운</a>
 
-  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/blogdown/">blogdown</a>
-
-  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/netlify/">netlify</a>
-
                   </div>
                 
               
@@ -360,7 +291,7 @@ $ git push origin master
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-04/" data-tooltip="R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -368,7 +299,7 @@ $ git push origin master
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-02/" data-tooltip="R로 블로그 만들기(2) - config.toml 설정하기">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-04/" data-tooltip="R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -386,19 +317,19 @@ $ git push origin master
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://traceofpassion.github.io/2020/blog-making-03/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://traceofpassion.github.io/2020/blog-making-05/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://traceofpassion.github.io/2020/blog-making-03/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://traceofpassion.github.io/2020/blog-making-05/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://traceofpassion.github.io/2020/blog-making-03/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://traceofpassion.github.io/2020/blog-making-05/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -446,7 +377,7 @@ $ git push origin master
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-04/" data-tooltip="R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -454,7 +385,7 @@ $ git push origin master
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-02/" data-tooltip="R로 블로그 만들기(2) - config.toml 설정하기">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-04/" data-tooltip="R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -472,19 +403,19 @@ $ git push origin master
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://traceofpassion.github.io/2020/blog-making-03/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://traceofpassion.github.io/2020/blog-making-05/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://traceofpassion.github.io/2020/blog-making-03/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://traceofpassion.github.io/2020/blog-making-05/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://traceofpassion.github.io/2020/blog-making-03/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://traceofpassion.github.io/2020/blog-making-05/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -514,19 +445,19 @@ $ git push origin master
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftraceofpassion.github.io%2F2020%2Fblog-making-03%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftraceofpassion.github.io%2F2020%2Fblog-making-05%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ftraceofpassion.github.io%2F2020%2Fblog-making-03%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ftraceofpassion.github.io%2F2020%2Fblog-making-05%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ftraceofpassion.github.io%2F2020%2Fblog-making-03%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ftraceofpassion.github.io%2F2020%2Fblog-making-05%2F">
           <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -616,9 +547,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/traceofpassion.github.io\/2020\/blog-making-03\/';
+          this.page.url = 'https:\/\/traceofpassion.github.io\/2020\/blog-making-05\/';
           
-            this.page.identifier = '\/2020\/blog-making-03\/'
+            this.page.identifier = '\/2020\/blog-making-05\/'
           
         };
         (function() {

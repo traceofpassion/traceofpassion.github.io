@@ -6,14 +6,24 @@
     <description>Recent content in 블로그 on HS-DATABLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 13 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(5) - Latex으로 수식 삽입과 Cloudinary로 이미지 넣기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-05/</link>
+      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-05/</guid>
+      <description>6단계. Latex으로 수식 삽입과 Cloudinary로 이미지 넣기 </description>
+    </item>
+    
     <item>
       <title>R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기</title>
       <link>https://traceofpassion.github.io/2020/blog-making-04/</link>
       <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://traceofpassion.github.io/2020/blog-making-04/</guid>
-      <description>5단계. 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기 </description>
+      <description>5단계. 구글 애널리틱스(GA) 연동하기 구글 애널리틱스(GA)란, 블로그를 방문하는 사람들의 수, 국가, PC/모바일 여부 등 다양한 트래픽 관리 기능을 갖추고 있는 구글의 툴입니다. 블로그의 흥망성쇠를 측정하는 좋은 지표랄까요. 오늘은 GA를 내 블로그에 연동하는 방법을 알아보겠습니다.
+5-1.  Google Analytics에 접속하여 구글 계정으로 로그인합니다.   측정 시작 버튼을 클릭합니다.    GA 계정 이름(ID)를 설정합니다.    속성 이름을 설정합니다. 속성은 사이트를 관리하는 하나의 단위로 이해하면 될 것 같습니다. 블로그 관련 속성임을 알아보기 편하게 이름 짓습니다.</description>
     </item>
     
     <item>
@@ -22,7 +32,7 @@
       <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://traceofpassion.github.io/2020/blog-making-03/</guid>
-      <description>4단계. Netlify로 사이트 배포하기 4-1 $ cd TestBlog # 본인의 레포지토리 경로$ git add .$ git commit -m &amp;quot;first commit&amp;quot;$ git push origin master 지금까지의 내용을 커밋한 후, origin(깃헙)의 master 브랜치에 푸시합니다.  4-2  Netlify는 정적 사이트의 호스팅과 백엔드를 제공하는 서비스입니다. 한 마디로, 제작한 블로그에 링크를 달아주는 역할을 하는 친구입니다. GitHub 계정으로 Netlify의 회원가입을 마칩니다.  4-3  로그인을 마치고 나면 다음과 같은 화면이 나옵니다. 여기서 New site from Git을 클릭합니다.</description>
+      <description>4단계. Netlify로 사이트 배포하기 4-1. $ cd TestBlog # 본인의 레포지토리 경로$ git add .$ git commit -m &amp;quot;first commit&amp;quot;$ git push origin master 지금까지의 내용을 커밋한 후, origin(깃헙)의 master 브랜치에 푸시합니다.  4-2.  Netlify는 정적 사이트의 호스팅과 백엔드를 제공하는 서비스입니다. 한 마디로, 제작한 블로그에 링크를 달아주는 역할을 하는 친구입니다. GitHub 계정으로 Netlify의 회원가입을 마칩니다.  4-3.  로그인을 마치고 나면 다음과 같은 화면이 나옵니다. 여기서 New site from Git을 클릭합니다.</description>
     </item>
     
     <item>
