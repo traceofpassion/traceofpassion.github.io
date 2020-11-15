@@ -273,20 +273,20 @@ if (!doNotTrack) {
 <ul>
 <li>아래 내용에 <strong>포함되지 않는 모든 코드는 별도의 수정을 하지 않았으니 default값을 유지</strong>합니다.</li>
 </ul>
-<h2 id="3-1">3-1</h2>
+<h2 id="3-1">3-1.</h2>
 <p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605179210/post/blog_making/config01_iczmra.png" alt="3-1"></p>
 <ul>
 <li>프로젝트 파일 실행 후, 불러오기로 config.toml 파일을 실행합니다.</li>
 <li>config은 configuration의 줄임말로, &lsquo;구성&rsquo;을 뜻합니다. 사이트의 여러 가지 구성 요소를 설정하는 파일입니다.</li>
 </ul>
-<h2 id="3-2">3-2</h2>
+<h2 id="3-2">3-2.</h2>
 <pre><code class="language-{go" data-lang="{go"># I STRONGLY recommend you to use a CDN to speed up loading of pages.
 # There is many free CDN like Cloudinary or you can also use indirectly
 # by using services like Google Photos.
 </code></pre><ul>
 <li>가장 위에 있는 주석을 먼저 살펴봅니다. 이 테마의 저자는 <a href="https://ko.wikipedia.org/wiki/%EC%BD%98%ED%85%90%EC%B8%A0_%EC%A0%84%EC%86%A1_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC">CDN</a> 방식을 사용해서 페이지를 업로드하기를 추천합니다. CDN은 Content Distribution Network의 줄임말로, 인터넷으로 여러 노드를 가진 네트워크에 데이터를 저장하여 제공하는 시스템입니다. 한 마디로, 구글 포토, icloud 등의 클라우드 방식으로 데이터를 제공하는 방식를 의미합니다. 저자는 속도 향상을 위해 CDN을 추천합니다. 저 또한 저자가 추천하는 <a href="https://cloudinary.com/">Cloudinary</a>를 통해 이미지 데이터를 제공합니다.</li>
 </ul>
-<h2 id="3-3">3-3</h2>
+<h2 id="3-3">3-3.</h2>
 <pre><code class="language-{go" data-lang="{go">baseURL = &quot;/&quot;
 title = &quot;Test Blog&quot;
 # disqusShortname = &quot;&quot;
@@ -297,7 +297,7 @@ title = &quot;Test Blog&quot;
 <li><code>disqusShortname</code>: 댓글 기능을 추가할 수 있는 disqus의 ID. 현재는 반영되지 않도록 주석 처리. 추후에 커스터마이징에서 다룰 예정.</li>
 <li><code>googleAnalytics</code>: 사이트의 트래픽을 측정할 수 있는 구글애널리틱스의 ID. 현재는 반영되지 않도록 주석 처리. 추후에 커스터마이징에서 다룰 예정.</li>
 </ul>
-<h2 id="3-4">3-4</h2>
+<h2 id="3-4">3-4.</h2>
 <p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605179211/post/blog_making/config02_gahwlv.png" alt="3-4"></p>
 <pre><code class="language-{go" data-lang="{go">[author]
   name = &quot;나폴레옹&quot;
@@ -321,7 +321,7 @@ title = &quot;Test Blog&quot;
 </ul>
 </li>
 </ul>
-<h2 id="3-5">3-5</h2>
+<h2 id="3-5">3-5.</h2>
 <p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605179211/post/blog_making/config03_vopzpk.png" alt="3-5"></p>
 <pre><code class="language-{go" data-lang="{go">[[menu.links]]
   weight = 1
@@ -345,7 +345,7 @@ title = &quot;Test Blog&quot;
 </ul>
 </li>
 </ul>
-<h2 id="3-6">3-6</h2>
+<h2 id="3-6">3-6.</h2>
 <p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605179211/post/blog_making/config04_ttxmwh.png" alt="3-6"></p>
 <pre><code class="language-{go" data-lang="{go"># 블로그 소개글
   description = &quot;나폴레옹의 테스트 블로그입니다.&quot;
@@ -357,7 +357,7 @@ copyright = &quot;&lt;a href=\&quot;https://github.com/traceofpassion\&quot;&gt;
 <li><code>description</code>: 블로그 소개글. 링크를 카카오톡에 공유할 때 블로그 이름 밑에 적히는 문구입니다.</li>
 <li><code>copyright</code>: 저작권 명시. 법적 효력이 있는지는 모르겠습니다.</li>
 </ul>
-<h2 id="3-7">3-7</h2>
+<h2 id="3-7">3-7.</h2>
 <pre><code class="language-{r" data-lang="{r">blogdown::build_site()
 </code></pre><ul>
 <li>최종적으로 콘솔에 build_site() 함수를 통해 수정한 config.toml을 반영하여 사이트를 재구성합니다. build_site()는 게시글을 작성한 후에도 지속적으로 사용되니 기억해두면 좋습니다.</li>
