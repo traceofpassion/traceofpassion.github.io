@@ -18,19 +18,6 @@
     </item>
     
     <item>
-      <title>R로 블로그 만들기(6) - 폰트 변경하기</title>
-      <link>https://traceofpassion.github.io/2020/blog-making-06/</link>
-      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://traceofpassion.github.io/2020/blog-making-06/</guid>
-      <description>7단계. 폰트 변경하기 7-1
- NodeJS 8 버전 설치하기  7-2
- fonts와 variable에 원하는 폰트 추가  7-3
-cd themenpm installnpm install -g grunt-cligrunt build node_modules 삭제. css만 필요할 뿐, 빌드는 블로그다운으로 진행하기 때문.  7-4
-blogdown::build_site()</description>
-    </item>
-    
-    <item>
       <title>R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기</title>
       <link>https://traceofpassion.github.io/2020/blog-making-04/</link>
       <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>

@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>https://traceofpassion.github.io/2020/blog-making-06/</loc>
-    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://traceofpassion.github.io/2020/blog-making-04/</loc>
     <lastmod>2020-11-13T00:00:00+00:00</lastmod>
   </url>
@@ -25,11 +20,6 @@
   <url>
     <loc>https://traceofpassion.github.io/2020/blog-making-02/</loc>
     <lastmod>2020-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://traceofpassion.github.io/tags/blogdown/</loc>
-    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -80,6 +70,11 @@
   <url>
     <loc>https://traceofpassion.github.io/tags/%ED%8F%AC%EC%8A%A4%ED%8C%85/</loc>
     <lastmod>2020-11-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://traceofpassion.github.io/tags/blogdown/</loc>
+    <lastmod>2020-11-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
