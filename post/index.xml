@@ -16,7 +16,7 @@
       <description>7단계. 폰트 변경하기 7-1
  NodeJS 8 버전 설치하기  7-2
  fonts와 variable에 원하는 폰트 추가  7-3
-cd themenpm installgrunt build node_modules 삭제. css만 필요할 뿐, 빌드는 블로그다운으로 진행하기 때문.  7-4
+cd themenpm installnpm install -g grunt-cligrunt build node_modules 삭제. css만 필요할 뿐, 빌드는 블로그다운으로 진행하기 때문.  7-4
 blogdown::build_site()</description>
     </item>
     
