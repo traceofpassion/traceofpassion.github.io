@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>커스터마이징 on HS-DATABLOG</title>
+    <link>https://traceofpassion.github.io/categories/%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95/</link>
+    <description>Recent content in 커스터마이징 on HS-DATABLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/categories/%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(6) - 폰트 변경하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-06/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-06/</guid>
+      <description>7단계. 폰트 변경하기 7-1
+ NodeJS 8 버전 설치하기  7-2
+ fonts와 variable에 원하는 폰트 추가  7-3
+cd themenpm installgrunt build node_modules 삭제. css만 필요할 뿐, 빌드는 블로그다운으로 진행하기 때문.  7-4
+blogdown::build_site()</description>
+    </item>
+    
+    <item>
+      <title>R로 블로그 만들기(5) - Latex으로 수식 삽입과 Cloudinary로 이미지 넣기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-05/</link>
+      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-05/</guid>
+      <description>6단계. Latex으로 수식 삽입과 Cloudinary로 이미지 넣기 </description>
+    </item>
+    
+    <item>
+      <title>R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-04/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-04/</guid>
+      <description>5단계. 구글 애널리틱스(GA) 연동하기 구글 애널리틱스(GA)란, 블로그를 방문하는 사람들의 수, 국가, PC/모바일 여부 등 다양한 트래픽 관리 기능을 갖추고 있는 구글의 툴입니다. 블로그의 흥망성쇠를 측정하는 좋은 지표랄까요. 오늘은 GA를 내 블로그에 연동하는 방법을 알아보겠습니다.
+5-1.  Google Analytics에 접속하여 구글 계정으로 로그인합니다.   측정 시작 버튼을 클릭합니다.    GA 계정 이름(ID)를 설정합니다.    속성 이름을 설정합니다. 속성은 사이트를 관리하는 하나의 단위로 이해하면 될 것 같습니다. 블로그 관련 속성임을 알아보기 편하게 이름 짓습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

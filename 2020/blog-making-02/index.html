@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.78.2 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="H.S Lee">
+<meta name="keywords" content="블로그, 블로그다운, blogdown, tranquilpeak, font awesome">
+<meta name="description" content="config.toml 설정하기">
+
+
+<meta property="og:description" content="config.toml 설정하기">
+<meta property="og:type" content="article">
+<meta property="og:title" content="R로 블로그 만들기(2) - config.toml 설정하기">
+<meta name="twitter:title" content="R로 블로그 만들기(2) - config.toml 설정하기">
+<meta property="og:url" content="https://traceofpassion.github.io/2020/blog-making-02/">
+<meta property="twitter:url" content="https://traceofpassion.github.io/2020/blog-making-02/">
+<meta property="og:site_name" content="HS-DATABLOG">
+<meta property="og:description" content="config.toml 설정하기">
+<meta name="twitter:description" content="config.toml 설정하기">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2020-11-12T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2020-11-12T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="블로그">
+    
+      <meta property="article:section" content="시작하기">
+    
+  
+  
+    
+      <meta property="article:tag" content="블로그">
+    
+      <meta property="article:tag" content="블로그다운">
+    
+      <meta property="article:tag" content="blogdown">
+    
+      <meta property="article:tag" content="tranquilpeak">
+    
+      <meta property="article:tag" content="font awesome">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://res.cloudinary.com/traceofpassion/image/upload/v1605163814/post/blog_making/blog_thumbnail_ov1duz.jpg">
+  <meta property="twitter:image" content="https://res.cloudinary.com/traceofpassion/image/upload/v1605163814/post/blog_making/blog_thumbnail_ov1duz.jpg">
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=640">
+
+
+    <title>R로 블로그 만들기(2) - config.toml 설정하기</title>
+
+    <link rel="icon" href="https://res.cloudinary.com/traceofpassion/image/upload/v1605001308/setting/favicon_phj3px.png">
+    
+
+    
+
+    <link rel="canonical" href="https://traceofpassion.github.io/2020/blog-making-02/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://traceofpassion.github.io/css/tranquilpeak.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-169190550-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="1">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://traceofpassion.github.io/">HS-DATABLOG</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://traceofpassion.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="1">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://traceofpassion.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">H.S Lee</h4>
+        
+          <h5 class="sidebar-profile-bio">It is never wrong to do the right thing.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://traceofpassion.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">홈</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://traceofpassion.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">카테고리</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://traceofpassion.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">태그</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://traceofpassion.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">아카이브</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/traceofpassion" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/traceofpassion/" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://traceofpassion.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="1"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      R로 블로그 만들기(2) - config.toml 설정하기
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2020-11-12T00:00:00Z">
+        
+  November 12, 2020
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://traceofpassion.github.io/categories/%eb%b8%94%eb%a1%9c%ea%b7%b8">블로그</a>, 
+    
+      <a class="category-link" href="https://traceofpassion.github.io/categories/%ec%8b%9c%ec%9e%91%ed%95%98%ea%b8%b0">시작하기</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h1 id="3단계-configtoml-설정하기">3단계. config.toml 설정하기</h1>
+<ul>
+<li>아래 내용에 <strong>포함되지 않는 모든 코드는 별도의 수정을 하지 않았으니 default값을 유지</strong>합니다.</li>
+</ul>
+<h2 id="3-1">3-1</h2>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605179210/post/blog_making/config01_iczmra.png" alt="3-1"></p>
+<ul>
+<li>프로젝트 파일 실행 후, 불러오기로 config.toml 파일을 실행합니다.</li>
+<li>config은 configuration의 줄임말로, &lsquo;구성&rsquo;을 뜻합니다. 사이트의 여러 가지 구성 요소를 설정하는 파일입니다.</li>
+</ul>
+<h2 id="3-2">3-2</h2>
+<pre><code class="language-{go" data-lang="{go"># I STRONGLY recommend you to use a CDN to speed up loading of pages.
+# There is many free CDN like Cloudinary or you can also use indirectly
+# by using services like Google Photos.
+</code></pre><ul>
+<li>가장 위에 있는 주석을 먼저 살펴봅니다. 이 테마의 저자는 <a href="https://ko.wikipedia.org/wiki/%EC%BD%98%ED%85%90%EC%B8%A0_%EC%A0%84%EC%86%A1_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC">CDN</a> 방식을 사용해서 페이지를 업로드하기를 추천합니다. CDN은 Content Distribution Network의 줄임말로, 인터넷으로 여러 노드를 가진 네트워크에 데이터를 저장하여 제공하는 시스템입니다. 한 마디로, 구글 포토, icloud 등의 클라우드 방식으로 데이터를 제공하는 방식를 의미합니다. 저자는 속도 향상을 위해 CDN을 추천합니다. 저 또한 저자가 추천하는 <a href="https://cloudinary.com/">Cloudinary</a>를 통해 이미지 데이터를 제공합니다.</li>
+</ul>
+<h2 id="3-3">3-3</h2>
+<pre><code class="language-{go" data-lang="{go">baseURL = &quot;/&quot;
+title = &quot;Test Blog&quot;
+# disqusShortname = &quot;&quot;
+# googleAnalytics = &quot;&quot;
+</code></pre><ul>
+<li><code>baseURL</code>: 문서의 기본 url. 일단은 &ldquo;/&ldquo;로 설정.</li>
+<li><code>title</code>: 블로그의 제목. 필자는 &ldquo;Test Blog&quot;로 설정.</li>
+<li><code>disqusShortname</code>: 댓글 기능을 추가할 수 있는 disqus의 ID. 현재는 반영되지 않도록 주석 처리. 추후에 커스터마이징에서 다룰 예정.</li>
+<li><code>googleAnalytics</code>: 사이트의 트래픽을 측정할 수 있는 구글애널리틱스의 ID. 현재는 반영되지 않도록 주석 처리. 추후에 커스터마이징에서 다룰 예정.</li>
+</ul>
+<h2 id="3-4">3-4</h2>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605179211/post/blog_making/config02_gahwlv.png" alt="3-4"></p>
+<pre><code class="language-{go" data-lang="{go">[author]
+  name = &quot;나폴레옹&quot;
+  bio = &quot;내 사전에는 불가능이란 없다.&quot;
+  job = &quot;황제&quot;
+  location = &quot;프랑스&quot;
+  # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
+  # gravatarEmail = &quot;thibaud.lepretre@gmail.com&quot;
+  # Your profile picture
+  # Overwritten by your gravatar image if `author.gravatarEmail` is filled
+  picture = &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg/192px-Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg&quot;
+</code></pre><ul>
+<li><code>name</code>: 블로그 저자의 이름</li>
+<li><code>bio</code>: 자신을 소개하는 문구</li>
+<li><code>job</code>: 직업</li>
+<li><code>location</code>: 사는 곳</li>
+<li><code>gravatarEmail</code> or <code>picture</code>: 프로필 사진을 설정하는 2가지 방법
+<ul>
+<li><code>gravatarEmail</code>: gravatar(<a href="https://ko.gravatar.com/">https://ko.gravatar.com/</a>)에 회원가입 후 프로필 이미지를 업로드. 가입한 계정을 config.toml에 표기하면 자동 연동</li>
+<li><code>picture</code>: 본인이 설정한 이미지 업로드. 저는 CDN으로 구글에 이미지를 검색하여 그 주소를 연동했습니다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-5">3-5</h2>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605179211/post/blog_making/config03_vopzpk.png" alt="3-5"></p>
+<pre><code class="language-{go" data-lang="{go">[[menu.links]]
+  weight = 1
+  identifier = &quot;github&quot;
+  name = &quot;GitHub&quot;
+  pre = &quot;&lt;i class=\&quot;sidebar-button-icon fa fa-lg fa-github\&quot;&gt;&lt;/i&gt;&quot;
+  url = &quot;https://github.com/traceofpassion&quot;
+[[menu.links]]
+  weight = 2
+  identifier = &quot;facebook&quot;
+  name = &quot;Facebook&quot;
+  pre = &quot;&lt;i class=\&quot;sidebar-button-icon fa fa-lg fa-facebook\&quot;&gt;&lt;/i&gt;&quot;
+  url = &quot;https://www.facebook.com/hyeongsun.lee/&quot;
+</code></pre><ul>
+<li><code>github url</code>: 자신의 깃헙 프로필 주소로 설정</li>
+<li><code>linkedin url</code>: 원래는 stackoverflow가 default값이나, 저는 잘 사용하지 않아 facebook으로 변경했습니다.
+<ul>
+<li><code>identifier</code>와 <code>name</code>의 이름을 변경합니다.</li>
+<li><a href="https://fontawesome.com/icons?d=gallery">Font Awesome Icons</a>에 해당 사이트의 아이콘 이미지가 있는지 확인하고, 이름을 확인합니다. fa-(바꿀 아이콘의 이름)으로 변경합니다.</li>
+<li>해당 주소로 설정합니다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-6">3-6</h2>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605179211/post/blog_making/config04_ttxmwh.png" alt="3-6"></p>
+<pre><code class="language-{go" data-lang="{go"># 블로그 소개글
+  description = &quot;나폴레옹의 테스트 블로그입니다.&quot;
+
+# Copyright
+[params.footer]
+copyright = &quot;&lt;a href=\&quot;https://github.com/traceofpassion\&quot;&gt;나폴레옹&lt;/a&gt;&quot;
+</code></pre><ul>
+<li><code>description</code>: 블로그 소개글. 링크를 카카오톡에 공유할 때 블로그 이름 밑에 적히는 문구입니다.</li>
+<li><code>copyright</code>: 저작권 명시. 법적 효력이 있는지는 모르겠습니다.</li>
+</ul>
+<h2 id="3-7">3-7</h2>
+<pre><code class="language-{r" data-lang="{r">blogdown::build_site()
+</code></pre><ul>
+<li>최종적으로 콘솔에 build_site() 함수를 통해 수정한 config.toml을 반영하여 사이트를 재구성합니다. build_site()는 게시글을 작성한 후에도 지속적으로 사용되니 기억해두면 좋습니다.</li>
+</ul>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/">블로그</a>
+
+  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%8B%A4%EC%9A%B4/">블로그다운</a>
+
+  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/blogdown/">blogdown</a>
+
+  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/tranquilpeak/">tranquilpeak</a>
+
+  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/font-awesome/">font awesome</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-03/" data-tooltip="R로 블로그 만들기(3) - Netlify로 사이트 배포하기">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-01/" data-tooltip="R로 블로그 만들기(1) - 깃(git)과 블로그다운(blogdown) 패키지">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://traceofpassion.github.io/2020/blog-making-02/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://traceofpassion.github.io/2020/blog-making-02/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://traceofpassion.github.io/2020/blog-making-02/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 <a href="https://github.com/traceofpassion">H.S Lee</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-03/" data-tooltip="R로 블로그 만들기(3) - Netlify로 사이트 배포하기">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-01/" data-tooltip="R로 블로그 만들기(1) - 깃(git)과 블로그다운(blogdown) 패키지">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://traceofpassion.github.io/2020/blog-making-02/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://traceofpassion.github.io/2020/blog-making-02/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://traceofpassion.github.io/2020/blog-making-02/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftraceofpassion.github.io%2F2020%2Fblog-making-02%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ftraceofpassion.github.io%2F2020%2Fblog-making-02%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ftraceofpassion.github.io%2F2020%2Fblog-making-02%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">H.S Lee</h4>
+    
+      <div id="about-card-bio">It is never wrong to do the right thing.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Data Analyist
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Seoul, S.Korea
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    <div id="cover" style="background-image:url('https://res.cloudinary.com/traceofpassion/image/upload/v1605163815/setting/cover_book_bagevu.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://traceofpassion.github.io/js/tranquilpeak.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/traceofpassion.github.io\/2020\/blog-making-02\/';
+          
+            this.page.identifier = '\/2020\/blog-making-02\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'traceofpassion';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+<script src="//yihui.org/js/math-code.js"></script>
+<script async
+src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+    
+  </body>
+</html>
+

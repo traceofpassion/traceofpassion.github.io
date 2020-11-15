@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>netlify on HS-DATABLOG</title>
+    <link>https://traceofpassion.github.io/tags/netlify/</link>
+    <description>Recent content in netlify on HS-DATABLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/netlify/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(3) - Netlify로 사이트 배포하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-03/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-03/</guid>
+      <description>4단계. Netlify로 사이트 배포하기 4-1. $ cd TestBlog # 본인의 레포지토리 경로$ git add .$ git commit -m &amp;quot;first commit&amp;quot;$ git push origin master 지금까지의 내용을 커밋한 후, origin(깃헙)의 master 브랜치에 푸시합니다.  4-2.  Netlify는 정적 사이트의 호스팅과 백엔드를 제공하는 서비스입니다. 한 마디로, 제작한 블로그에 링크를 달아주는 역할을 하는 친구입니다. GitHub 계정으로 Netlify의 회원가입을 마칩니다.  4-3.  로그인을 마치고 나면 다음과 같은 화면이 나옵니다. 여기서 New site from Git을 클릭합니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>시작하기 on HS-DATABLOG</title>
+    <link>https://traceofpassion.github.io/categories/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/</link>
+    <description>Recent content in 시작하기 on HS-DATABLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/categories/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(3) - Netlify로 사이트 배포하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-03/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-03/</guid>
+      <description>4단계. Netlify로 사이트 배포하기 4-1. $ cd TestBlog # 본인의 레포지토리 경로$ git add .$ git commit -m &amp;quot;first commit&amp;quot;$ git push origin master 지금까지의 내용을 커밋한 후, origin(깃헙)의 master 브랜치에 푸시합니다.  4-2.  Netlify는 정적 사이트의 호스팅과 백엔드를 제공하는 서비스입니다. 한 마디로, 제작한 블로그에 링크를 달아주는 역할을 하는 친구입니다. GitHub 계정으로 Netlify의 회원가입을 마칩니다.  4-3.  로그인을 마치고 나면 다음과 같은 화면이 나옵니다. 여기서 New site from Git을 클릭합니다.</description>
+    </item>
+    
+    <item>
+      <title>R로 블로그 만들기(2) - config.toml 설정하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-02/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-02/</guid>
+      <description>3단계. config.toml 설정하기  아래 내용에 포함되지 않는 모든 코드는 별도의 수정을 하지 않았으니 default값을 유지합니다.  3-1  프로젝트 파일 실행 후, 불러오기로 config.toml 파일을 실행합니다. config은 configuration의 줄임말로, &amp;lsquo;구성&amp;rsquo;을 뜻합니다. 사이트의 여러 가지 구성 요소를 설정하는 파일입니다.  3-2 # I STRONGLY recommend you to use a CDN to speed up loading of pages.# There is many free CDN like Cloudinary or you can also use indirectly# by using services like Google Photos.</description>
+    </item>
+    
+    <item>
+      <title>R로 블로그 만들기(1) - 깃(git)과 블로그다운(blogdown) 패키지</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-01/</link>
+      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-01/</guid>
+      <description>제가 처음 블로그를 만든 계기는 연세대학교의 이 모 교수님의 수업을 들으면서였습니다. 블로그를 만들어 게시물을 올리는 과제를 받았고, 수행하다보니 흥미가 생기고 이것저것 욕심이 생겨 예쁘게 꾸미고 기능을 추가하는 재미를 알았습니다. 그러나 마냥 행복하진 않았습니다. 아무래도 이 바닥이 다 그러하듯, 한국어 레퍼런스가 적어서 구글링을 해가며 찾는 과정이 지루할 때도 있었습니다. 블로그 메이킹 시리즈를 시작하는 이유는 혹시라도 누군가 저처럼 헤매는 이가 있다면 조금이라도 도움이 되고 싶은 마음에서입니다.
+이 시리즈의 목표는 다음과 같습니다.
+ R로 &amp;lsquo;그럴싸한&amp;rsquo; 블로그를 만들어본다.</description>
+    </item>
+    
+  </channel>
+</rss>
