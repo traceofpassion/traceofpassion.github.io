@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://traceofpassion.github.io/sitemap.xml
