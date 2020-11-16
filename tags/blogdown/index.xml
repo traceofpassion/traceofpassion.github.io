@@ -19,6 +19,16 @@
     </item>
     
     <item>
+      <title>R로 블로그 만들기(5) - 게시글 작성(Posting)과 Cloudinary로 이미지 삽입하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-05/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-05/</guid>
+      <description>7단계. 게시글 작성(Posting) 본격적으로 게시글을 작성하는 방법을 알아보겠습니다.
+7-1.  블로그 테마를 처음 설치했을 때 여러 기본 게시글이 있는 걸 확인하실 수 있습니다. 이 게시글은 어떻게 작성할까요? 경로를 확인합니다. 가장 상위 폴더로부터 /content/post 경로를 확인할 수 있습니다. 이 경로에 마크다운(.md) 확장자로 저장된 게시글이 위치합니다. 이 게시글은 테마를 제작한 kakawait가 남겨 놓은 좋은 샘플입니다. 이 샘플을 활용하여 원하는 형태로 게시글을 작성할 수 있습니다.  7-2. 샘플 중 하나인 Elements-showcase.md를 살펴보도록 하겠습니다.</description>
+    </item>
+    
+    <item>
       <title>R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기</title>
       <link>https://traceofpassion.github.io/2020/blog-making-04/</link>
       <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
