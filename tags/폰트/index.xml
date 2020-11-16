@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>폰트 on HS-DATABLOG</title>
+    <link>https://traceofpassion.github.io/tags/%ED%8F%B0%ED%8A%B8/</link>
+    <description>Recent content in 폰트 on HS-DATABLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 16 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/%ED%8F%B0%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(6) - 폰트 변경하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-06/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-06/</guid>
+      <description>9단계. 폰트 변경하기 blogdown에서 제공하는 기본 테마(hugo-lithium)에서 폰트 변경은 크게 어렵지 않습니다. 하지만, tranquilpeak 테마는 다릅니다. 사이트의 구조가 복잡한 편이라 그런지 폰트 변경이 까다롭습니다. 본 게시글은 HUGO로 사이트를 빌드하신 분들의 사이트를 참고하여 제작하였습니다.
+9-1. 먼저 가장 상위 폴더로부터 위치한 ./themes/hugo-tranquilpeak-theme/src/scss/utils 경로를 탐색합니다. 두 가지 파일 _fonts.scss와 _variables.scss를 수정합니다. 각각 사용할 폰트를 웹으로부터 다운받는 역할과 폰트를 적용할 요소를 설정하는 역할을 합니다. 두 파일을 메모장을 연결 프로그램하여 오픈합니다.
+9-2. 폰트를 정합니다. 저는 게시글에는 가독성이 좋으며 한글과 영문 적용이 동시에 되는 Noto Sans KR, 코드에는 네이버에서 배포한 나눔고딕코딩을 적용하겠습니다.</description>
+    </item>
+    
+  </channel>
+</rss>
