@@ -6,7 +6,25 @@
     <description>Recent content on HS-DATABLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 16 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Nov 2020 01:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>하둡 이해하기(2) - YARN(얀)</title>
+      <link>https://traceofpassion.github.io/2020/hadoop-02/</link>
+      <pubDate>Tue, 17 Nov 2020 01:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/hadoop-02/</guid>
+      <description>YARN(얀)  Yet Another Resource Negotiator의 줄임말  각 워커 노드의 노드매니저(NodeManager)가 리소스매니저(ResourceManager)에게 가용한 연산 자원과 메모리 용량을 보고한다. 리소스매니저는 연산을 수행하는 애플리케이션에게 컨테이너(Container)를 배정하고, 컨테이너 안에서 애플리케이션마스터(App Mstr)가 구동되어 리소스매니저에게 연산에 필요한 컨테이너를 요청한다. 여러 명의 클라이언트는 각자의 애플리케이션을 수행하고, 연산에 필요한 자원은 서로 다른 크기의 컨테이너로 분할된다. 직접 데이터를 다루는 연산은 하지 않고, 연산을 수행하는 애플리케이션을 실행하는 프레임워크이다(일 분배만하는 작업반장 느낌인가).  참고  엔터프라이즈 데이터 플랫폼 구축(얀 쿠닉크, 이안 버스, 폴 윌킨슨, 라스 조지	지음) Apache Hadoop Documents  </description>
+    </item>
+    
+    <item>
+      <title>하둡 이해하기(1) - HDFS(하둡 분산파일 시스템)</title>
+      <link>https://traceofpassion.github.io/2020/hadoop-01/</link>
+      <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/hadoop-01/</guid>
+      <description>HDFS(하둡 분산파일 시스템)  Hadoop Distributed File System의 줄임말  클라이언트(Client)는 데이터를 저장(Write)하기 위해 데이터를 여러 개의 블록(Blocks)으로 나누고 네임노드(Namenode)에게 데이터노드(Datanodes)의 목록을 받는다. 클라이언트는 차례 대로 데이터노드에 분산하여 저장한다. 데이터노드는 복제하는 방식으로 나머지 블록을 저장한다. 데이터를 읽을(Read) 때 역시 네임노드 -&amp;gt; 데이터노드 순서대로 진행한다. 데이터의 안정성이 유지되면서도, 데이터노드를 추가하면 확장이 가능한 시스템  참고  엔터프라이즈 데이터 플랫폼 구축(얀 쿠닉크, 이안 버스, 폴 윌킨슨, 라스 조지	지음) Apache Hadoop Documents  </description>
+    </item>
+    
     <item>
       <title>R로 블로그 만들기(6) - 폰트 변경하기</title>
       <link>https://traceofpassion.github.io/2020/blog-making-06/</link>

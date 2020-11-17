@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>데이터 플랫폼 on HS-DATABLOG</title>
-    <link>https://traceofpassion.github.io/categories/%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%8C%EB%9E%AB%ED%8F%BC/</link>
-    <description>Recent content in 데이터 플랫폼 on HS-DATABLOG</description>
+    <title>하둡 on HS-DATABLOG</title>
+    <link>https://traceofpassion.github.io/categories/%ED%95%98%EB%91%A1/</link>
+    <description>Recent content in 하둡 on HS-DATABLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 17 Nov 2020 01:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/categories/%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%8C%EB%9E%AB%ED%8F%BC/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Nov 2020 01:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/categories/%ED%95%98%EB%91%A1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>하둡 이해하기(2) - YARN(얀)</title>
       <link>https://traceofpassion.github.io/2020/hadoop-02/</link>
