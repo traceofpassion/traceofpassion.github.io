@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hadoop on HS-DATABLOG</title>
+    <link>https://traceofpassion.github.io/tags/hadoop/</link>
+    <description>Recent content in hadoop on HS-DATABLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language><atom:link href="https://traceofpassion.github.io/tags/hadoop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>데이터 플랫폼 스터디(1) - 하둡 생태계의 기초 이해하기</title>
+      <link>https://traceofpassion.github.io/1/data-platform-study-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/1/data-platform-study-01/</guid>
+      <description> </description>
+    </item>
+    
+  </channel>
+</rss>
