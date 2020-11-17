@@ -13,7 +13,7 @@
       <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://traceofpassion.github.io/2020/data-platform-study-01/</guid>
-      <description>HDFS YARN JooKeeper Hive MapReduce Spark Impala HBase Kudu Solr Kafka Oozie  </description>
+      <description>HDFS(하둡 분산파일 시스템)  Hadoop Distributed File System의 줄임말  클라이언트(Client)는 데이터를 저장(Write)하기 위해 데이터를 여러 개의 블록(Blocks)으로 나누고 네임노드(Namenode)에게 데이터노드(Datanodes)의 목록을 받는다. 클라이언트는 차례 대로 데이터노드에 분산하여 저장한다. 데이터노드는 복제하는 방식으로 나머지 블록을 저장한다. 데이터를 읽을(Read) 때 역시 네임노드 -&amp;gt; 데이터노드 순서대로 진행한다. 데이터의 안정성이 유지되면서도, 데이터노드를 추가하면 확장이 가능한 시스템  YARN(얀)  Yet Another Resource Negotiator의 줄임말  각 워커 노드의 노드매니저(NodeManager)가 리소스매니저(ResourceManager)에게 가용한 연산 자원과 메모리 용량을 보고한다.</description>
     </item>
     
   </channel>
