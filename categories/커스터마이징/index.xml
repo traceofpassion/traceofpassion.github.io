@@ -6,7 +6,17 @@
     <description>Recent content in 커스터마이징 on HS-DATABLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 16 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/categories/%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/categories/%EC%BB%A4%EC%8A%A4%ED%84%B0%EB%A7%88%EC%9D%B4%EC%A7%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(7) - LaTex로 수식 삽입하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-06/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-06/</guid>
+      <description>10단계. LaTex로 수식 삽입하기 데이터 사이언스 블로그를 운영하다보면 아무래도 수식을 사용할 때가 많습니다. 통계부터 머신러닝까지 모두 근간을 이루는 수학이 우선이기 때문인데요. RMarkdown에서는 문서 조판에 사용되는 프로그램 LaTex로 $ $ 사이에 있는 텍스트를 문법에 따라 수식으로 변환합니다. 다만 웹 브라우저에서 LaTex을 실행하기 위해서는 JavaScript 라이브러리 MathJax를 별도로 연동해야합니다.
+10-1. &amp;lt;script src=&amp;quot;//yihui.org/js/math-code.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script asyncsrc=&amp;quot;//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; 상위 폴더로부터 ./themes/hugo-tranquilpeak-theme/layouts/partials/에 위치한 `script.html&amp;rsquo;를 메모장으로 켜서 위의 코드를 가장 아래에 추가합니다.  10-2.  config.</description>
+    </item>
+    
     <item>
       <title>R로 블로그 만들기(6) - 폰트 변경하기</title>
       <link>https://traceofpassion.github.io/2020/blog-making-06/</link>
@@ -25,7 +35,7 @@
       
       <guid>https://traceofpassion.github.io/2020/blog-making-05/</guid>
       <description>7단계. 게시글 작성(Posting) 본격적으로 게시글을 작성하는 방법을 알아보겠습니다.
-7-1.  블로그 테마를 처음 설치했을 때 여러 기본 게시글이 있는 걸 확인하실 수 있습니다. 이 게시글은 어떻게 작성할까요? 경로를 확인합니다. 가장 상위 폴더로부터 /content/post 경로를 확인할 수 있습니다. 이 경로에 마크다운(.md) 확장자로 저장된 게시글이 위치합니다. 이 게시글은 테마를 제작한 kakawait가 남겨 놓은 좋은 샘플입니다. 이 샘플을 활용하여 원하는 형태로 게시글을 작성할 수 있습니다.  7-2. 샘플 중 하나인 Elements-showcase.md를 살펴보도록 하겠습니다.</description>
+7-1.  블로그 테마를 처음 설치했을 때 여러 기본 게시글이 있는 걸 확인할 수 있습니다. 그렇다면 게시글은 어떻게 작성할까요? 경로를 확인합니다. 가장 상위 폴더로부터 /content/post 경로를 확인할 수 있습니다. 이 경로에 마크다운(.md) 확장자로 저장된 게시글이 위치합니다. 이 게시글은 테마를 제작한 kakawait가 남겨 놓은 좋은 샘플입니다. 이 샘플을 활용하여 원하는 형태로 게시글을 작성할 수 있습니다.  7-2. 샘플 중 하나인 Elements-showcase.md를 살펴보도록 하겠습니다.</description>
     </item>
     
     <item>

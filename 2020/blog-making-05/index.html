@@ -277,7 +277,7 @@ if (!doNotTrack) {
 <h2 id="7-1">7-1.</h2>
 <p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605440967/post/blog_making/posting01_ibxhjh.png" alt="7-1"></p>
 <ul>
-<li>블로그 테마를 처음 설치했을 때 여러 기본 게시글이 있는 걸 확인하실 수 있습니다. 이 게시글은 어떻게 작성할까요?</li>
+<li>블로그 테마를 처음 설치했을 때 여러 기본 게시글이 있는 걸 확인할 수 있습니다. 그렇다면 게시글은 어떻게 작성할까요?</li>
 <li>경로를 확인합니다. 가장 상위 폴더로부터 <code>/content/post</code> 경로를 확인할 수 있습니다. 이 경로에 <code>마크다운(.md)</code> 확장자로 저장된 게시글이 위치합니다. 이 게시글은 테마를 제작한 <a href="https://github.com/kakawait">kakawait</a>가 남겨 놓은 좋은 샘플입니다. 이 샘플을 활용하여 원하는 형태로 게시글을 작성할 수 있습니다.</li>
 </ul>
 <h2 id="7-2">7-2.</h2>
@@ -312,7 +312,7 @@ title: Elements showcase
 </ul>
 <p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605440967/post/blog_making/posting02_bvagjc.png" alt="7-2"></p>
 <ul>
-<li><code>&lt; !--more-- &gt;</code> 위의 내용까지만 게시글의 부분을 홈 화면에서 제공하는 기능입니다. 이 기능은 R마크다운(.Rmd) 파일에서는 적용이 되지 않아서 불편함이 있는데, 이를 개선하는 방법은 조금 복잡하여 추후에 따로 다루도록 하겠습니다.</li>
+<li><code>&lt; !--more-- &gt;</code> 위의 내용까지만 게시글의 부분을 홈 화면에서 제공하는 기능입니다. 이 기능은 RMarkdown(.Rmd) 파일에서는 적용이 되지 않아서 불편함이 있는데, 이를 개선하는 방법은 조금 복잡하여 추후에 따로 다루도록 하겠습니다.</li>
 </ul>
 <h2 id="7-3">7-3.</h2>
 <p>7-2 과정을 통해 샘플을 이해하는 과정을 살펴봤습니다. 샘플마다 YAML 구조가 조금씩 다르고 보여주고 싶은 기능이 여러 가지이므로, 필요할 때마다 하나씩 살펴가며 목적에 맞게 게시글을 작성할 수 있습니다. 이제 샘플을 블로그에서 제거합니다. 저는 기존 경로에서 가장 상위 폴더로부터 <code>sample</code> 폴더를 생성하고 여기로 샘플을 이동시켜 샘플을 보관하면서도 블로그에는 반영되지 않도록 조치하였습니다.</p>
@@ -322,7 +322,7 @@ title: Elements showcase
 </code></pre><ul>
 <li><code>blogdown::new_post()</code>로 새로운 게시글을 생성합니다. Console에서 해당 코드를 실행하면 <code>./content/post/</code> 경로에 마크다운 파일이 생성되고 작업이 가능합니다.</li>
 <li>제목은 영문 작성을 추천합니다. 한글로 설정할 경우 정체 불명의 파일명이 만들어지기 때문입니다. 추후에 파일에서 YAML을 수정하면 한글 입력이 가능합니다.</li>
-<li>R마크다운(.Rmd) 파일 생성을 원할 경우, 확장자를 <code>.md</code> 대신 <code>.Rmd</code>로 변경합니다.</li>
+<li>RMarkdown 파일 생성을 원할 경우, 확장자를 <code>.md</code> 대신 <code>.Rmd</code>로 변경합니다.</li>
 </ul>
 <pre><code>---
 title: 'md파일로 작성한 게시글'
@@ -391,7 +391,7 @@ $ git push origin master
 </ul>
 <h1 id="블로그-시리즈-바로가기httpstraceofpassiongithubiocategoriesebb894eba19ceab7b8"><a href="https://traceofpassion.github.io/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/">블로그 시리즈 바로가기</a></h1>
 <ul>
-<li><a href="https://traceofpassion.github.io/2020/blog-making-01/">R로 블로그 만들기(1) - 깃(git)과 블로그다운(blogdown) 패키지</a></li>
+<li><a href="https://traceofpassion.github.io/2020/blog-making-01/">R로 블로그 만들기(1) - Git 설정과 blogdown 패키지 설치</a></li>
 <li><a href="https://traceofpassion.github.io/2020/blog-making-02/">R로 블로그 만들기(2) - config.toml 설정하기</a></li>
 <li><a href="https://traceofpassion.github.io/2020/blog-making-03/">R로 블로그 만들기(3) - Netlify로 사이트 배포하기</a></li>
 <li><a href="https://traceofpassion.github.io/2020/blog-making-04/">R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기</a></li>

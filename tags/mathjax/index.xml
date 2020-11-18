@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mathjax on HS-DATABLOG</title>
+    <link>https://traceofpassion.github.io/tags/mathjax/</link>
+    <description>Recent content in mathjax on HS-DATABLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/mathjax/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(7) - LaTex로 수식 삽입하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-06/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-06/</guid>
+      <description>10단계. LaTex로 수식 삽입하기 데이터 사이언스 블로그를 운영하다보면 아무래도 수식을 사용할 때가 많습니다. 통계부터 머신러닝까지 모두 근간을 이루는 수학이 우선이기 때문인데요. RMarkdown에서는 문서 조판에 사용되는 프로그램 LaTex로 $ $ 사이에 있는 텍스트를 문법에 따라 수식으로 변환합니다. 다만 웹 브라우저에서 LaTex을 실행하기 위해서는 JavaScript 라이브러리 MathJax를 별도로 연동해야합니다.
+10-1. &amp;lt;script src=&amp;quot;//yihui.org/js/math-code.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script asyncsrc=&amp;quot;//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; 상위 폴더로부터 ./themes/hugo-tranquilpeak-theme/layouts/partials/에 위치한 `script.html&amp;rsquo;를 메모장으로 켜서 위의 코드를 가장 아래에 추가합니다.  10-2.  config.</description>
+    </item>
+    
+  </channel>
+</rss>

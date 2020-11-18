@@ -276,7 +276,7 @@ if (!doNotTrack) {
 <p>먼저 가장 상위 폴더로부터 위치한 <code>./themes/hugo-tranquilpeak-theme/src/scss/utils</code> 경로를 탐색합니다. 두 가지 파일 <code>_fonts.scss</code>와 <code>_variables.scss</code>를 수정합니다. 각각 사용할 폰트를 웹으로부터 다운받는 역할과 폰트를 적용할 요소를 설정하는 역할을 합니다. 두 파일을 메모장을 연결 프로그램하여 오픈합니다.</p>
 <h2 id="9-2">9-2.</h2>
 <p>폰트를 정합니다. 저는 게시글에는 가독성이 좋으며 한글과 영문 적용이 동시에 되는 <a href="https://fonts.google.com/specimen/Noto+Sans+KR">Noto Sans KR</a>, 코드에는 네이버에서 배포한 <a href="https://fonts.google.com/specimen/Nanum+Gothic+Coding?query=nanum+">나눔고딕코딩</a>을 적용하겠습니다.</p>
-<p><img src="font01.png" alt=""></p>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605713056/post/blog_making/font01_oezujt.png" alt="9-2"></p>
 <ul>
 <li>위와 같이 설정한 후, <code>@import</code> 아래의 url을 복사합니다.</li>
 </ul>
@@ -330,7 +330,7 @@ $font-families: (
    'sidebar':           $noto-sans-kr
 );
 </code></pre><h2 id="9-5">9-5.</h2>
-<p>가장 까다로운 파트입니다. 해당 테마는 폰트 변경을 위해서는 npm의 grunt를 통해 빌드하는 과정을 담고 있습니다. npm은 nodejs의 파이썬-pip 개념이라는데, 정확한 의미는 모르겠습니다. 저는 다음과 같은 과정을 통해 폰트를 반영했습니다.</p>
+<p>가장 까다로운 파트입니다. 해당 테마는 폰트 변경을 위해서는 npm의 grunt를 통해 빌드하는 과정을 담고 있습니다. npm은 <a href="https://ko.wikipedia.org/wiki/Npm_(%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4)">Node.js의 기본 패키지 관리자</a>입니다. Python의 pip 개념으로 이해하면 된다고 합니다. grunt는 <a href="https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%9F%B0%ED%8A%B8">태스크를 자동으로 수행하는 도구</a>로써 Gruntfile 파일에 정의된 태스크를 수행합니다. grunt는 npm을 통해 배포됩니다. 폰트 변경을 반영하기 위해서는 npm을 설치하고, grunt를 설치하고, Gruntfile 파일에 정의된 태스크를 수행해야 합니다. 구체적인 과정은 다음과 같습니다.</p>
 <ul>
 <li><a href="https://nodejs.org/ko/download/releases/">Node.js 8.x 버전</a> 설치하기
 <ul>
@@ -363,7 +363,7 @@ $ git push origin master
 </ul>
 <h1 id="블로그-시리즈-바로가기httpstraceofpassiongithubiocategoriesebb894eba19ceab7b8"><a href="https://traceofpassion.github.io/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/">블로그 시리즈 바로가기</a></h1>
 <ul>
-<li><a href="https://traceofpassion.github.io/2020/blog-making-01/">R로 블로그 만들기(1) - 깃(git)과 블로그다운(blogdown) 패키지</a></li>
+<li><a href="https://traceofpassion.github.io/2020/blog-making-01/">R로 블로그 만들기(1) - Git 설정과 blogdown 패키지 설치</a></li>
 <li><a href="https://traceofpassion.github.io/2020/blog-making-02/">R로 블로그 만들기(2) - config.toml 설정하기</a></li>
 <li><a href="https://traceofpassion.github.io/2020/blog-making-03/">R로 블로그 만들기(3) - Netlify로 사이트 배포하기</a></li>
 <li><a href="https://traceofpassion.github.io/2020/blog-making-04/">R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기</a></li>
@@ -398,7 +398,7 @@ $ git push origin master
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/hadoop-01/" data-tooltip="하둡 이해하기(1) - HDFS(하둡 분산파일 시스템)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-06/" data-tooltip="R로 블로그 만들기(7) - LaTex로 수식 삽입하기">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">다음</span>
@@ -484,7 +484,7 @@ $ git push origin master
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/hadoop-01/" data-tooltip="하둡 이해하기(1) - HDFS(하둡 분산파일 시스템)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-06/" data-tooltip="R로 블로그 만들기(7) - LaTex로 수식 삽입하기">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">다음</span>

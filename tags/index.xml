@@ -6,56 +6,38 @@
     <description>Recent content in Tags on HS-DATABLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 17 Nov 2020 01:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>YARN</title>
-      <link>https://traceofpassion.github.io/tags/yarn/</link>
-      <pubDate>Tue, 17 Nov 2020 01:00:00 +0000</pubDate>
-      
-      <guid>https://traceofpassion.github.io/tags/yarn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>데이터 플랫폼</title>
-      <link>https://traceofpassion.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%8C%EB%9E%AB%ED%8F%BC/</link>
-      <pubDate>Tue, 17 Nov 2020 01:00:00 +0000</pubDate>
-      
-      <guid>https://traceofpassion.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%8C%EB%9E%AB%ED%8F%BC/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>하둡</title>
-      <link>https://traceofpassion.github.io/tags/%ED%95%98%EB%91%A1/</link>
-      <pubDate>Tue, 17 Nov 2020 01:00:00 +0000</pubDate>
-      
-      <guid>https://traceofpassion.github.io/tags/%ED%95%98%EB%91%A1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HDFS</title>
-      <link>https://traceofpassion.github.io/tags/hdfs/</link>
-      <pubDate>Tue, 17 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://traceofpassion.github.io/tags/hdfs/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>blogdown</title>
       <link>https://traceofpassion.github.io/tags/blogdown/</link>
-      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://traceofpassion.github.io/tags/blogdown/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>latex</title>
+      <link>https://traceofpassion.github.io/tags/latex/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mathjax</title>
+      <link>https://traceofpassion.github.io/tags/mathjax/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/tags/mathjax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>블로그</title>
       <link>https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/</link>
-      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/</guid>
       <description></description>
@@ -127,7 +109,7 @@
     <item>
       <title>K-Means</title>
       <link>https://traceofpassion.github.io/tags/k-means/</link>
-      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://traceofpassion.github.io/tags/k-means/</guid>
       <description></description>
@@ -136,7 +118,7 @@
     <item>
       <title>K-Modes</title>
       <link>https://traceofpassion.github.io/tags/k-modes/</link>
-      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://traceofpassion.github.io/tags/k-modes/</guid>
       <description></description>
@@ -145,7 +127,7 @@
     <item>
       <title>K-Prototypes</title>
       <link>https://traceofpassion.github.io/tags/k-prototypes/</link>
-      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://traceofpassion.github.io/tags/k-prototypes/</guid>
       <description></description>
@@ -154,7 +136,7 @@
     <item>
       <title>군집분석</title>
       <link>https://traceofpassion.github.io/tags/%EA%B5%B0%EC%A7%91%EB%B6%84%EC%84%9D/</link>
-      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://traceofpassion.github.io/tags/%EA%B5%B0%EC%A7%91%EB%B6%84%EC%84%9D/</guid>
       <description></description>
@@ -163,7 +145,7 @@
     <item>
       <title>머신러닝</title>
       <link>https://traceofpassion.github.io/tags/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/</link>
-      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://traceofpassion.github.io/tags/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D/</guid>
       <description></description>
