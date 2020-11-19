@@ -6,7 +6,18 @@
     <description>Recent content in 블로그 on HS-DATABLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(8) - 부제목(Description) 사용하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-08/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-08/</guid>
+      <description>11단계. 부제목(Description) 사용하기 R로 블로기 만들기(5)에서 Markdown 파일에서 부제목을 어떻게 사용하는지 배웠습니다. 다만 RMarkdown에서 Markdown처럼 &amp;lt; !&amp;ndash; more &amp;gt; 을 사용할 경우, 부제목 기능이 정상적으로 작동하지 않을 뿐더러, 본문에는 HUGOMORE42라는 텍스트가 삽입되어 이상한 결과를 낳습니다. 이러한 현상을 막기 위해 YAML 헤더에 Description 파라미터를 지정하고 이를 부제목으로 적용하는 방법을 소개합니다.
+11-1. 먼저, 가장 상위 폴더로부터 ./themes/hugo-tranquilpeak-theme/layouts/_default/ 경로에 위치한 summary.html 파일을 메모장을 연결 프로그램으로 하여 실행합니다.
+ {{ if .Params.Summary }}{{ .</description>
+    </item>
+    
     <item>
       <title>R로 블로그 만들기(7) - LaTex로 수식 삽입하기</title>
       <link>https://traceofpassion.github.io/2020/blog-making-07/</link>
