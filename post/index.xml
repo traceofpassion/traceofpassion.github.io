@@ -6,7 +6,18 @@
     <description>Recent content in Posts on HS-DATABLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(9) - 구글과 네이버 검색에 내 블로그 노출시키기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-09/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-09/</guid>
+      <description>12단계. 구글과 네이버 검색에 내 블로그 노출시키기 내 블로그를 구글에 노출시키기 위해서는 Google Search Console에, 네이버에 노출시키기 위해서는 Naver Search Advisor에 웹사이트 주소를 등록해야 합니다. 그 전에 설정할 두 가지 옵션은 robots.txt와 favicon입니다.
+12-1. robots.txt 로봇 배제 표준은 웹사이트에 로봇이 접근하는 것을 방지하기 위한 규약으로, 일반적으로 접근 제한에 대한 설명을 robots.txt에 기술합니다.
+User-agent: *Allow: / 모든 로봇에게 문서 접근을 허락하기 위해 위와 같이 기입하여 가장 상위 폴더로부터 ./static/ 경로에 robots.</description>
+    </item>
+    
     <item>
       <title>R로 블로그 만들기(8) - 부제목(Description) 사용하기</title>
       <link>https://traceofpassion.github.io/2020/blog-making-08/</link>

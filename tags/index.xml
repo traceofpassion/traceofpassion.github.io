@@ -6,13 +6,58 @@
     <description>Recent content in Tags on HS-DATABLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>blogdown</title>
       <link>https://traceofpassion.github.io/tags/blogdown/</link>
-      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://traceofpassion.github.io/tags/blogdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>favicon</title>
+      <link>https://traceofpassion.github.io/tags/favicon/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/tags/favicon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>robots.txt</title>
+      <link>https://traceofpassion.github.io/tags/robots.txt/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/tags/robots.txt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>구글</title>
+      <link>https://traceofpassion.github.io/tags/%EA%B5%AC%EA%B8%80/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/tags/%EA%B5%AC%EA%B8%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>네이버</title>
+      <link>https://traceofpassion.github.io/tags/%EB%84%A4%EC%9D%B4%EB%B2%84/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/tags/%EB%84%A4%EC%9D%B4%EB%B2%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>블로그</title>
+      <link>https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/</guid>
       <description></description>
     </item>
     
@@ -22,15 +67,6 @@
       <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://traceofpassion.github.io/tags/description/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>블로그</title>
-      <link>https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/</link>
-      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/</guid>
       <description></description>
     </item>
     
