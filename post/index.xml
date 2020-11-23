@@ -100,7 +100,7 @@ User-agent: *Allow: / 모든 로봇에게 문서 접근을 허락하기 위해
     </item>
     
     <item>
-      <title>클러스터링 K-3형제</title>
+      <title>[머신러닝] 클러스터링 K-삼형제 탐구하기(K-Means, K-Modes, K-Prototypes)</title>
       <link>https://traceofpassion.github.io/2020/k-series/</link>
       <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
       
