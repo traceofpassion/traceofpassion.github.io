@@ -6,7 +6,18 @@
     <description>Recent content in Posts on HS-DATABLOG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 20 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>데이터 플랫폼 구축 스터디(1) - 클러스터</title>
+      <link>https://traceofpassion.github.io/2020/data-platform-01/</link>
+      <pubDate>Sun, 22 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/data-platform-01/</guid>
+      <description>1. 다중 클러스터를 사용하는 이유 1-1. 회복성   회복성 있는 시스템 아키텍처 설계를 위한 조건
+ 고가용성 보장  오랜 기간 동안 지속적으로 정상 운영이 가능한 성질   단일 실패 지점(Single Point Of Failure) 제거  시스템 구성 요소 중에서, 동작하지 않으면 전체 시스템이 중단되는 요소      회복성 있는 클러스터 용량 산정
+ 기본 클러스터 + 재해 발생 시 운용 가능한 보조 클러스터(원격 사이트)로 구성하여 운용 보조 클러스터는 평소 비활성 상태로 두지만, 이를 탐색/리포트 수행으로 활용 가능    1-2.</description>
+    </item>
+    
     <item>
       <title>R로 블로그 만들기(9) - 구글과 네이버 검색에 내 블로그 노출시키기</title>
       <link>https://traceofpassion.github.io/2020/blog-making-09/</link>

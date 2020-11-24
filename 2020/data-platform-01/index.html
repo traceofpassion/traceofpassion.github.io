@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.78.2 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="H.S Lee">
+<meta name="keywords" content="데이터 플랫폼, 인프라스트럭처, 클러스터">
+<meta name="description" content="플랫폼을 구축할 때 클러스터와 관련한 고려사항을 학습해보자.">
+
+
+<meta property="og:description" content="플랫폼을 구축할 때 클러스터와 관련한 고려사항을 학습해보자.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="데이터 플랫폼 구축 스터디(1) - 클러스터">
+<meta name="twitter:title" content="데이터 플랫폼 구축 스터디(1) - 클러스터">
+<meta property="og:url" content="https://traceofpassion.github.io/2020/data-platform-01/">
+<meta property="twitter:url" content="https://traceofpassion.github.io/2020/data-platform-01/">
+<meta property="og:site_name" content="HS-DATABLOG">
+<meta property="og:description" content="플랫폼을 구축할 때 클러스터와 관련한 고려사항을 학습해보자.">
+<meta name="twitter:description" content="플랫폼을 구축할 때 클러스터와 관련한 고려사항을 학습해보자.">
+<meta property="og:locale" content="ko-kr">
+
+  
+    <meta property="article:published_time" content="2020-11-22T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2020-11-22T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="데이터 플랫폼">
+    
+      <meta property="article:section" content="인프라스트럭처">
+    
+  
+  
+    
+      <meta property="article:tag" content="데이터 플랫폼">
+    
+      <meta property="article:tag" content="인프라스트럭처">
+    
+      <meta property="article:tag" content="클러스터">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://res.cloudinary.com/traceofpassion/image/upload/v1605539266/post/data_platform/build_platform_furzay.jpg">
+  <meta property="twitter:image" content="https://res.cloudinary.com/traceofpassion/image/upload/v1605539266/post/data_platform/build_platform_furzay.jpg">
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=640">
+
+
+    <title>데이터 플랫폼 구축 스터디(1) - 클러스터</title>
+
+    <link rel="icon" href="https://traceofpassion.github.io/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://traceofpassion.github.io/2020/data-platform-01/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://traceofpassion.github.io/css/tranquilpeak.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-169190550-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="1">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://traceofpassion.github.io/">HS-DATABLOG</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://traceofpassion.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=90" alt="프로필" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="1">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://traceofpassion.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=110" alt="프로필" />
+        </a>
+        <h4 class="sidebar-profile-name">H.S Lee</h4>
+        
+          <h5 class="sidebar-profile-bio">It is never wrong to do the right thing.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://traceofpassion.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">홈</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://traceofpassion.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">카테고리</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://traceofpassion.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">태그</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://traceofpassion.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">아카이브</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/traceofpassion" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/traceofpassion/" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://traceofpassion.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="1"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      데이터 플랫폼 구축 스터디(1) - 클러스터
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2020-11-22T00:00:00Z">
+        
+  
+  
+  
+  
+    2020년 11월 22일 00:00
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://traceofpassion.github.io/categories/%eb%8d%b0%ec%9d%b4%ed%84%b0-%ed%94%8c%eb%9e%ab%ed%8f%bc">데이터 플랫폼</a>, 
+    
+      <a class="category-link" href="https://traceofpassion.github.io/categories/%ec%9d%b8%ed%94%84%eb%9d%bc%ec%8a%a4%ed%8a%b8%eb%9f%ad%ec%b2%98">인프라스트럭처</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h1 id="1-다중-클러스터를-사용하는-이유">1. 다중 클러스터를 사용하는 이유</h1>
+<h2 id="1-1-회복성">1-1. 회복성</h2>
+<ul>
+<li>
+<p>회복성 있는 시스템 아키텍처 설계를 위한 조건</p>
+<ul>
+<li><a href="https://ko.wikipedia.org/wiki/%EA%B3%A0%EA%B0%80%EC%9A%A9%EC%84%B1">고가용성</a> 보장
+<ul>
+<li>오랜 기간 동안 지속적으로 정상 운영이 가능한 성질</li>
+</ul>
+</li>
+<li><a href="https://ko.wikipedia.org/wiki/%EB%8B%A8%EC%9D%BC_%EC%9E%A5%EC%95%A0%EC%A0%90">단일 실패 지점(Single Point Of Failure)</a> 제거
+<ul>
+<li>시스템 구성 요소 중에서, 동작하지 않으면 전체 시스템이 중단되는 요소</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>회복성 있는 클러스터 용량 산정</p>
+<ul>
+<li>기본 클러스터 + 재해 발생 시 운용 가능한 보조 클러스터(원격 사이트)로 구성하여 운용</li>
+<li>보조 클러스터는 평소 비활성 상태로 두지만, 이를 탐색/리포트 수행으로 활용 가능</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-소프트웨어-개발">1-2. 소프트웨어 개발</h2>
+<ul>
+<li>
+<p>모든 소프트웨어 변경과 설정 변경은 위험 요소를 내포</p>
+<ul>
+<li>개발 프로세스 단계를 포함하는 별도 클러스터를 배포하면 단계별 클러스터 환경을 거치고 테스트하여 위험 완화 가능</li>
+<li>실제 적용 사례
+<ul>
+<li>시스템 통합 테스트(SIT, System Integration Testing): 클러스터 배포 후, 격리된 환경에서 업그레이드 테스트 수행</li>
+<li>사용자 인수 테스트(UAT, User Acceptance Testing): 클러스터 배포 후, 격리된 환경에서 플랫폼 설정을 조절</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>클러스터 크기</p>
+<ul>
+<li>개발 프로세스 단계별로 클러스터 환경의 규모를 달리하여 스토리지와 처리 능력 차이를 대처
+<ul>
+<li>작은 규모: 구현(Dev), 테스트(Test), 품질보증(QA)</li>
+<li>큰 규모: 사용자 인수(User Acceptance), 운영 전(Preproduction)</li>
+<li>더 큰 규모: 머신러닝 수행 최신 데이터 플랫폼</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-3-워크로드-분리">1-3. 워크로드 분리</h2>
+<ul>
+<li>모든 워크로드는 클러스터를 구성하는 하드웨어 자원(CPU 사이클, 메모리 크기, 메모리 대역폭, 스토리지 크기, 스토리지 대역폭, 네트워크 대역폭)을 필요로 한다. 동시 작업 시 자원 경합 발생 가능성 고려한다.</li>
+<li>처리량을 낮추면 안 되는 워크로드는 격리된 환경에 배포해야 한다.</li>
+<li>예시
+<ul>
+<li>HBase: 랜덤 읽기/쓰기가 동시에 매우 빈번히 발생. 서비스 수준 합의서(SLA, Service Level Agreement)에 의해 일정 시간 이내에 쿼리가 실행돼야 한다는 요구 사항이 있다면, 예측 가능한 디스크 읽기 시간과 로그 선행 기입(WAL, Write-Ahead Logging)을 위한 순차 파일 I/O 및 압축이 보장되어야 함
+<ul>
+<li><a href="https://ko.wikipedia.org/wiki/%EC%84%9C%EB%B9%84%EC%8A%A4_%EC%88%98%EC%A4%80_%ED%98%91%EC%95%BD%EC%84%9C">서비스 수준 합의서</a>: 서비스를 제공함에 있어서 공급자와 사용자간에 서비스에 대하여 측정지표와 목표 등에 대한 협약서</li>
+<li><a href="https://ko.wikipedia.org/wiki/%EB%A1%9C%EA%B7%B8_%EC%84%A0%ED%96%89_%EA%B8%B0%EC%9E%85">로그 선행 기입</a>: 데이터베이스 시스템에서 ACID의 특성 가운데 원자성과 내구성을 제공하는 기술의 한 계열</li>
+</ul>
+</li>
+<li>카프카: 메시지를 저장할 때 메모리 맵 파일(Memory Mapped File)을 사용해서 고성능 메시징이 가능함. 실질적으로는 리눅스 페이지 캐시가 최신 메시지 캐싱 작업을 담당함을 의미함.
+<ul>
+<li><a href="https://ko.wikipedia.org/wiki/%EB%A9%94%EB%AA%A8%EB%A6%AC_%EB%A7%B5_%ED%8C%8C%EC%9D%BC">메모리 맵 파일</a>: 운영 체제에서 파일을 다루는 방법중 하나</li>
+<li>장점
+<ul>
+<li>리눅스 페이지 캐시는 테스트됐고 최적화됨</li>
+<li>최신 메시지는 디스크보다는 주로 메모리에서 읽음</li>
+<li>디스크 작업은 대부분 순차 쓰기</li>
+<li>카프카를 재시작해도 캐시가 유지됨</li>
+</ul>
+</li>
+<li>메모리를 파일 내용을 캐시하는 데 사용하는 것이 자원 사용 측면에서 효율적</li>
+<li>리눅스 페이지 캐시는 파일 내용을 비어 있는 메모리에 캐시해두고, 동일한 파일이 요청되면 빠른 메모리에서 읽어서 성능을 높일 수 있음</li>
+<li>실제 메모리 사용량이 많아지면 페이지 캐시 크기를 줄이는 방식으로 최적화</li>
+<li>따라서 카프카가 페이지 캐시를 많이 사용할 수 있게 전용 장비에 배포</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-4-법규-준수">1-4. 법규 준수</h2>
+<ul>
+<li>고객이나 임직원에 대한 데이터를 분리하여 저장하는 법규가 있는 곳에서 다중 클러스터 사용</li>
+</ul>
+<h2 id="1-5-독립적인-스토리지-및-연산">1-5. 독립적인 스토리지 및 연산</h2>
+<ul>
+<li>초기에는 네트워크 대역폭이 귀한 자원. 따라서 스토리지와 연산을 분리하는 것이 트렌드였음</li>
+<li>충분한 네트워크 용량을 가진 대규모 클라우드 벤더(Azure Data Lake Storage, Amazon S3)같은 객체 스토어를 사용하면 가상 머신도 낮은 비용으로 데이터를 영구히 저장 가능</li>
+<li>일시적인 워크로드 분리에 사용될 수 있음</li>
+<li>병렬 접근 가능한 스토리지와 연산의 분리 덕분에 새로운 패턴으로 워크로드 격리</li>
+<li>확장성 있는 데이터 관리를 위해 일관성 있는 보안, 거버넌스, 데이터 리니지가 필요함</li>
+<li>클라우데라(Cloudera)는 공유 데이터를 둘러싼 일관성 있는 데이터 컨텍스트를 제공하기 위해 SDX(Shared Data Experience) 아키텍처를 만듦</li>
+</ul>
+<h1 id="2-멀티테넌시">2. 멀티테넌시</h1>
+<ul>
+<li>클러스터를 여러 개의 그룹이나 워크로드 사이에 공유하는 방식</li>
+<li>클러스터 관점에서의 의미
+<ul>
+<li>엔터프라이즈 환경 안의 여러 구성요소 사이에 공유되는 클러스터</li>
+<li>구현, 사용자 인수 테스트 등 여러 개발 단계에 사용되는 클러스터</li>
+<li>운영 중인 여러 원격 클러스터에서 생산되는 데이터의 백업 보관소로 사용되는 클러스터</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-1-멀티테넌시-적용을-위한-요구사항">2-1. 멀티테넌시 적용을 위한 요구사항</h2>
+<ul>
+<li>클러스터 수명주기
+<ul>
+<li>클러스터의 설치, 서비스 기동 및 중단, 스프트웨어 업그레이드, 중요한 설정 변경, 페기 등의 생애 주기 전체를 의미</li>
+<li>워크로드는 클러스터 수명주기와 호환되어야 한다.
+<ul>
+<li>예시) 업그레이드 테스트는 소프트웨어 업그레이드, 서비스 설정 변경 및 재시작 필요</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>자원관리
+<ul>
+<li>자원과 워크로드의 호환</li>
+<li>자원 모델: 워크로드 사이에 적극적으로 관리할 자원의 선정과 관리 방법에 대한 합의</li>
+<li>단일 서버, 리눅스 커널이 컨테이너 그룹(cgroup)을 사용해 높은 우선 순위를 가진 프로세스가 서버 자원을 더 자주 사용</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-클러스터-용량-산정">3. 클러스터 용량 산정</h1>
+<h2 id="31-스토리지-용량-산정">3.1. 스토리지 용량 산정</h2>
+<ul>
+<li>저장할 데이터의 크기에 기반한 클러스터 용량 산정 알고리즘
+<ul>
+<li>저장할 데이터의 크기 결정</li>
+<li>전체 스토리지 공간의 크기 결정</li>
+<li>서버당 스토리지 공간 크기 결정</li>
+<li>전체 스토리지 공간 크기를 서버당 스토리지 공간 크기로 나눈다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="311-스토리지-기준-hdfs-용량-산정">3.1.1. 스토리지 기준 HDFS 용량 산정</h3>
+<ul>
+<li>데이터 저장 방식에 따라 달라진다.
+<ul>
+<li>기본 복제 전략: 3군데 -&gt; 3배의 공간 + 임시 데이터 저장 공간 -&gt; 데이터셋 크기 * 4</li>
+<li>이레이저 코딩 전략: 50%의 추가 공간 + 임시 데이터 저장 공간 -&gt; 데이터셋 크기 * 2.5</li>
+</ul>
+</li>
+<li>실무적 고려 사항
+<ul>
+<li>데이터 표현 방식: 원본 포맷 저장 or 변환 여부, 압축 여부, 압축 코덱, 압축률</li>
+<li>데이터 증가: 시간에 따른 증가 -&gt; 단기간 or 장기간, 증가 속도 보수적 or 비상시 대비</li>
+<li>데이터 보유: 제도적 목적에 의한 장기간 보관, 변환/필터/정제 데이터 모두 보관</li>
+<li>데이터셋 크기 정확성: 다른 IT 시스템 기준으로 용량 재산정(ex. RDBMS에서 표현하는 방식에 따라 다름)</li>
+</ul>
+</li>
+</ul>
+<h3 id="312-스토리지-기준-카프카-규모-산정">3.1.2. 스토리지 기준 카프카 규모 산정</h3>
+<ul>
+<li>일반적인 메시지 보관 정책은 7일</li>
+</ul>
+<h3 id="313-스토리지-기준-쿠두-용량-산정">3.1.3. 스토리지 기준 쿠두 용량 산정</h3>
+<ul>
+<li>쿠두는 최적화가 많이 이뤄진 컬럼 포맷으로 데이터를 디스크에 저장 -&gt; 데이터 표현 방식 변경</li>
+<li>개념 증명(PoC, Proof of Concepts)를 통해 쿠두로 저장될 때 얼마만큼의 공간이 필요한지 실제로 측정할 것을 권고</li>
+</ul>
+<h2 id="32-입수율-기준-용량-산정">3.2. 입수율 기준 용량 산정</h2>
+<ul>
+<li>입수 데이터의 증가율은 명확하지 않은 편</li>
+<li>시간대별, 계절별, 비즈니스 성장 패턴에 따라 증가율의 변화를 알면, 고성능 데이터 입수 파이프라인을 설계할 때 Good</li>
+<li>입수율 고려 용량 산정 방법
+<ul>
+<li>데이터 입수 속도 결정</li>
+<li>데이터 처리 속도 결정</li>
+<li>1/2 필요한 서버 대수 산정</li>
+</ul>
+</li>
+<li>실무적 고려 사항
+<ul>
+<li>최대 및 평균 입수율: 시간에 따른 변화 반영</li>
+<li>입수 대역폭: 네트워크를 통한 데이터 전송 -&gt; 충분한 데이터 입수 대역폭</li>
+<li>쓰기 지속성: 적합한 쓰기 지속성 지정</li>
+</ul>
+</li>
+</ul>
+<h2 id="33-워크로드-기준-용량-산정">3.3. 워크로드 기준 용량 산정</h2>
+<ul>
+<li>PoC를 통해 알아낸다.
+<ul>
+<li>워크로드는 어떤 방식으로 처리하는가?</li>
+<li>데이터는 어떤 형태를 가지고 있나?</li>
+</ul>
+</li>
+</ul>
+<h1 id="참고">참고</h1>
+<ul>
+<li><a href="https://www.onlybook.co.kr/entry/data-platform">엔터프라이즈 데이터 플랫폼 구축(얀 쿠닉크, 이안 버스, 폴 윌킨슨, 라스 조지	지음)</a></li>
+<li><a href="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html">Apache Hadoop HDFS Docs</a></li>
+</ul>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">Tagged in</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%8C%EB%9E%AB%ED%8F%BC/">데이터 플랫폼</a>
+
+  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/%EC%9D%B8%ED%94%84%EB%9D%BC%EC%8A%A4%ED%8A%B8%EB%9F%AD%EC%B2%98/">인프라스트럭처</a>
+
+  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/%ED%81%B4%EB%9F%AC%EC%8A%A4%ED%84%B0/">클러스터</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">다음</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-09/" data-tooltip="R로 블로그 만들기(9) - 구글과 네이버 검색에 내 블로그 노출시키기">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">이전</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://traceofpassion.github.io/2020/data-platform-01/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://traceofpassion.github.io/2020/data-platform-01/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://traceofpassion.github.io/2020/data-platform-01/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 <a href="https://github.com/traceofpassion">H.S Lee</a>. All Rights Reserved
+  </span>
+  <div>Icons made by <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">다음</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-09/" data-tooltip="R로 블로그 만들기(9) - 구글과 네이버 검색에 내 블로그 노출시키기">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">이전</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://traceofpassion.github.io/2020/data-platform-01/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://traceofpassion.github.io/2020/data-platform-01/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://traceofpassion.github.io/2020/data-platform-01/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftraceofpassion.github.io%2F2020%2Fdata-platform-01%2F">
+          <i class="fa fa-facebook-official"></i><span>Facebook에 공유하기</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ftraceofpassion.github.io%2F2020%2Fdata-platform-01%2F">
+          <i class="fa fa-twitter"></i><span>Twitter에 공유하기</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ftraceofpassion.github.io%2F2020%2Fdata-platform-01%2F">
+          <i class="fa fa-google-plus"></i><span>Google&#43;에 공유하기</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=110" alt="프로필" />
+    
+    <h4 id="about-card-name">H.S Lee</h4>
+    
+      <div id="about-card-bio">It is never wrong to do the right thing.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Data Analyist
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Seoul, S.Korea
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    <div id="cover" style="background-image:url('https://res.cloudinary.com/traceofpassion/image/upload/v1605163815/setting/cover_book_bagevu.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://traceofpassion.github.io/js/tranquilpeak.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/traceofpassion.github.io\/2020\/data-platform-01\/';
+          
+            this.page.identifier = '\/2020\/data-platform-01\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'traceofpassion';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+<script src="//yihui.org/js/math-code.js"></script>
+<script async
+src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+    
+  </body>
+</html>
+
