@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>favicon on HS-DATABLOG</title>
+    <link>https://traceofpassion.github.io/tags/favicon/</link>
+    <description>Recent content in favicon on HS-DATABLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 20 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/favicon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(9) - 구글과 네이버 검색에 내 블로그 노출시키기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-09/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-09/</guid>
+      <description>&lt;p&gt;구글과 네이버 검색에 내 블로그를 노출시켜 사람들이 특정 키워드를 검색했을 때, 내 블로그를 찾아올 수 있는 방법을 소개합니다.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tranquilpeak on HS-DATABLOG</title>
+    <link>https://traceofpassion.github.io/tags/tranquilpeak/</link>
+    <description>Recent content in tranquilpeak on HS-DATABLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/tranquilpeak/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(2) - config.toml 설정하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-02/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-02/</guid>
+      <description>&lt;p&gt;블로그의 여러 요소를 설정할 수 있는 config.toml 사용법을 소개합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>R로 블로그 만들기(1) - Git 설정과 blogdown 패키지 설치</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-01/</link>
+      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-01/</guid>
+      <description>&lt;p&gt;블로그를 제작할 때 Git을 설정하는 방법과 blogdown 패키지 설치 과정을 소개합니다.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

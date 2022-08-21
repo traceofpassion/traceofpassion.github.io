@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blogdown on HS-DATABLOG</title>
+    <link>https://traceofpassion.github.io/tags/blogdown/</link>
+    <description>Recent content in blogdown on HS-DATABLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 20 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(9) - 구글과 네이버 검색에 내 블로그 노출시키기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-09/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-09/</guid>
+      <description>&lt;p&gt;구글과 네이버 검색에 내 블로그를 노출시켜 사람들이 특정 키워드를 검색했을 때, 내 블로그를 찾아올 수 있는 방법을 소개합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>R로 블로그 만들기(8) - 부제목(Description) 사용하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-08/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-08/</guid>
+      <description>&lt;p&gt;글의 제목 밑에 글의 내용을 간략하게 소개할 수 있는 부제목(Description)을 사용하는 방법을 소개합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>R로 블로그 만들기(7) - LaTex로 수식 삽입하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-07/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-07/</guid>
+      <description>&lt;p&gt;RMarkdown의 LaTex를 활용하여 게시글에 수식을 삽입하는 방법을 소개합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>R로 블로그 만들기(6) - 폰트 변경하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-06/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-06/</guid>
+      <description>&lt;p&gt;블로그의 폰트를 설정하는 방법을 소개합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>R로 블로그 만들기(5) - 게시글 작성(Posting)과 Cloudinary로 이미지 삽입하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-05/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-05/</guid>
+      <description>&lt;p&gt;본격적으로 게시글을 작성(Posting)하는 방법과 Cloudinary를 활용하여 이미지를 링크 형태로 삽입하는 방법을 소개합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-04/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-04/</guid>
+      <description>&lt;p&gt;블로그의 트래픽을 분석할 수 있는 구글 애널리틱스(GA) 연동 방법과 사람들과 의견을 주고 받을 수 있는 디스커스(disqus) 연동 방법을 소개합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>R로 블로그 만들기(2) - config.toml 설정하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-02/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-02/</guid>
+      <description>&lt;p&gt;블로그의 여러 요소를 설정할 수 있는 config.toml 사용법을 소개합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>R로 블로그 만들기(3) - Netlify로 사이트 배포하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-03/</link>
+      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-03/</guid>
+      <description>&lt;p&gt;제작한 블로그를 사람들이 인터넷 상에서 볼 수 있도록 배포해주는 Netlify를 소개합니다.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>R로 블로그 만들기(1) - Git 설정과 blogdown 패키지 설치</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-01/</link>
+      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-01/</guid>
+      <description>&lt;p&gt;블로그를 제작할 때 Git을 설정하는 방법과 blogdown 패키지 설치 과정을 소개합니다.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

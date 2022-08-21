@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>google analytics on HS-DATABLOG</title>
+    <link>https://traceofpassion.github.io/tags/google-analytics/</link>
+    <description>Recent content in google analytics on HS-DATABLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 13 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/google-analytics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-04/</link>
+      <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-04/</guid>
+      <description>&lt;p&gt;블로그의 트래픽을 분석할 수 있는 구글 애널리틱스(GA) 연동 방법과 사람들과 의견을 주고 받을 수 있는 디스커스(disqus) 연동 방법을 소개합니다.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>포스팅 on HS-DATABLOG</title>
+    <link>https://traceofpassion.github.io/tags/%ED%8F%AC%EC%8A%A4%ED%8C%85/</link>
+    <description>Recent content in 포스팅 on HS-DATABLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/%ED%8F%AC%EC%8A%A4%ED%8C%85/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(5) - 게시글 작성(Posting)과 Cloudinary로 이미지 삽입하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-05/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-05/</guid>
+      <description>&lt;p&gt;본격적으로 게시글을 작성(Posting)하는 방법과 Cloudinary를 활용하여 이미지를 링크 형태로 삽입하는 방법을 소개합니다.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

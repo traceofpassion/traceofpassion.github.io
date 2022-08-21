@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기",
+  
+  "image": "https://res.cloudinary.com/traceofpassion/image/upload/v1605163814/post/blog_making/blog_thumbnail_ov1duz.jpg",
+  
+  "datePublished": "2020-11-13T00:00:00Z",
+  "dateModified": "2020-11-13T00:00:00Z",
+  "author": {
+    "@type": "Person",
+    "name": "H.S Lee",
+    
+    "image": "https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/traceofpassion.github.io\/2020\/blog-making-04\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "HS-DATABLOG",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f"
+    }
+    
+  },
+  "description": "블로그의 트래픽을 분석할 수 있는 구글 애널리틱스(GA) 연동 방법과 사람들과 의견을 주고 받을 수 있는 디스커스(disqus) 연동 방법을 소개합니다.\n",
+  "keywords": ["블로그, blogdown, google analytics, disqus"]
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.101.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="H.S Lee">
+<meta name="keywords" content="블로그, blogdown, google analytics, disqus">
+<meta name="description" content="블로그의 트래픽을 분석할 수 있는 구글 애널리틱스(GA) 연동 방법과 사람들과 의견을 주고 받을 수 있는 디스커스(disqus) 연동 방법을 소개합니다.">
+
+
+<meta property="og:description" content="블로그의 트래픽을 분석할 수 있는 구글 애널리틱스(GA) 연동 방법과 사람들과 의견을 주고 받을 수 있는 디스커스(disqus) 연동 방법을 소개합니다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기">
+<meta name="twitter:title" content="R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기">
+<meta property="og:url" content="https://traceofpassion.github.io/2020/blog-making-04/">
+<meta property="twitter:url" content="https://traceofpassion.github.io/2020/blog-making-04/">
+<meta property="og:site_name" content="HS-DATABLOG">
+<meta property="og:description" content="블로그의 트래픽을 분석할 수 있는 구글 애널리틱스(GA) 연동 방법과 사람들과 의견을 주고 받을 수 있는 디스커스(disqus) 연동 방법을 소개합니다.">
+<meta name="twitter:description" content="블로그의 트래픽을 분석할 수 있는 구글 애널리틱스(GA) 연동 방법과 사람들과 의견을 주고 받을 수 있는 디스커스(disqus) 연동 방법을 소개합니다.">
+<meta property="og:locale" content="ko-kr">
+
+  
+    <meta property="article:published_time" content="2020-11-13T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2020-11-13T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="블로그">
+    
+      <meta property="article:section" content="커스터마이징">
+    
+  
+  
+    
+      <meta property="article:tag" content="블로그">
+    
+      <meta property="article:tag" content="blogdown">
+    
+      <meta property="article:tag" content="google analytics">
+    
+      <meta property="article:tag" content="disqus">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=640">
+
+
+
+
+
+  <meta property="og:image" content="https://res.cloudinary.com/traceofpassion/image/upload/v1605163814/post/blog_making/blog_thumbnail_ov1duz.jpg">
+  <meta property="twitter:image" content="https://res.cloudinary.com/traceofpassion/image/upload/v1605163814/post/blog_making/blog_thumbnail_ov1duz.jpg">
+
+
+    <title>R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기</title>
+
+    <link rel="icon" href="https://traceofpassion.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://traceofpassion.github.io/2020/blog-making-04/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://traceofpassion.github.io/css/tranquilpeak.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-169190550-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="1">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://traceofpassion.github.io/" aria-label="홈페이지로 바로가기">HS-DATABLOG</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://traceofpassion.github.io/#about" aria-label="링크 열기: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=90" alt="프로필" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="1">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://traceofpassion.github.io/#about" aria-label="작성자 더 알아보기">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=110" alt="프로필" />
+        </a>
+        <h4 class="sidebar-profile-name">H.S Lee</h4>
+        
+          <h5 class="sidebar-profile-bio">It is never wrong to do the right thing.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://traceofpassion.github.io/" title="홈">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">홈</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://traceofpassion.github.io/categories" title="카테고리">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">카테고리</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://traceofpassion.github.io/tags" title="태그">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">태그</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://traceofpassion.github.io/archives" title="아카이브">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">아카이브</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://traceofpassion.github.io/#about" title="소개">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">소개</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/traceofpassion" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/traceofpassion/" target="_blank" rel="noopener" title="LinkedIn">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://traceofpassion.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="1"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      R로 블로그 만들기(4) - 구글 애널리틱스(GA)와 디스커스(disqus) 연동하기
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-11-13T00:00:00Z">
+        
+  
+  
+  
+  
+    2020년 11월 13일 00:00
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://traceofpassion.github.io/categories/%eb%b8%94%eb%a1%9c%ea%b7%b8">블로그</a>, 
+    
+      <a class="category-link" href="https://traceofpassion.github.io/categories/%ec%bb%a4%ec%8a%a4%ed%84%b0%eb%a7%88%ec%9d%b4%ec%a7%95">커스터마이징</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>블로그의 트래픽을 분석할 수 있는 구글 애널리틱스(GA) 연동 방법과 사람들과 의견을 주고 받을 수 있는 디스커스(disqus) 연동 방법을 소개합니다.</p>
+<h1 id="5단계-구글-애널리틱스ga-연동하기">5단계. 구글 애널리틱스(GA) 연동하기</h1>
+<p><a href="https://en.wikipedia.org/wiki/Google_Analytics">구글 애널리틱스(GA)</a>란, 블로그를 방문하는 사람들의 수, 국가, PC/모바일 여부 등 다양한 트래픽 관리 기능을 갖추고 있는 구글의 툴입니다. 블로그의 흥망성쇠를 측정하는 좋은 지표랄까요. 오늘은 GA를 내 블로그에 연동하는 방법을 알아보겠습니다.</p>
+<h2 id="5-1">5-1.</h2>
+<ul>
+<li><a href="https://analytics.google.com">Google Analytics</a>에 접속하여 구글 계정으로 로그인합니다.</li>
+</ul>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605330586/post/blog_making/ga/ga01_ydudhi.png" alt="5-1-1"></p>
+<ul>
+<li><code>측정 시작</code> 버튼을 클릭합니다.</li>
+</ul>
+<hr>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605330586/post/blog_making/ga/ga02_ibscki.png" alt="5-1-2"></p>
+<ul>
+<li>GA 계정 이름(ID)를 설정합니다.</li>
+</ul>
+<hr>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605864846/post/blog_making/ga/ga3-1_kw3srr.png" alt="5-1-3-1"></p>
+<ul>
+<li>속성 이름을 설정합니다. 속성은 사이트를 관리하는 하나의 단위로 이해하면 될 것 같습니다. 블로그 관련 속성임을 알아보기 편하게 이름 짓습니다.</li>
+<li>시간과 통화를 대한민국으로 설정합니다.</li>
+</ul>
+<hr>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605864846/post/blog_making/ga/ga3-2_cdxzis.png" alt="5-1-3-2"></p>
+<ul>
+<li>위와 같이 설정하고, 웹사이트 주소를 입력합니다.</li>
+</ul>
+<hr>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605330585/post/blog_making/ga/ga04_j86omo.png" alt="5-1-4"></p>
+<ul>
+<li>비즈니스 정보는 기호게 맞게 설정합니다.</li>
+</ul>
+<h2 id="5-2">5-2.</h2>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605864846/post/blog_making/ga/ga5_dxmhsc.png" alt="5-2-1"></p>
+<ul>
+<li>GA 연동에 필요한 측정 ID를 부여받습니다. 이 ID를 복사합니다.</li>
+</ul>
+<h2 id="5-3">5-3.</h2>
+<pre tabindex="0"><code class="language-{go" data-lang="{go">googleAnalytics = &#34;측정 ID&#34;
+</code></pre><ul>
+<li>부여받은 ID를 config.toml의 googleAnalytics 파라미터로 지정합니다.</li>
+</ul>
+<pre tabindex="0"><code class="language-{r" data-lang="{r">blogdown::build_site()
+</code></pre><ul>
+<li>Console 창에 코드를 실행하여 블로그를 빌드합니다.</li>
+</ul>
+<pre tabindex="0"><code class="language-{bash" data-lang="{bash">$ cd TestBlog # 본인의 레포지토리 경로
+$ git add .
+$ git commit -m &#34;add ga&#34;
+$ git push origin master
+</code></pre><ul>
+<li>지금까지의 내용을 Git Bash를 통해 커밋한 후, origin(깃헙)의 master 브랜치에 푸시합니다.</li>
+</ul>
+<h1 id="6단계-디스커스disqus-연동하기">6단계. 디스커스(disqus) 연동하기</h1>
+<p><a href="https://en.wikipedia.org/wiki/Disqus">디스커스(disqus)</a>란, 블로그 댓글 호스팅 서비스입니다. 쉽게 설명하면 내 블로그에 댓글창을 추가하여 방문자와 의사소통을 할 수 있게 해주는 서비스라고 할 수 있습니다. 디스커스를 내 블로그에 연동하는 방법을 알아보겠습니다.</p>
+<h2 id="6-1">6-1.</h2>
+<ul>
+<li><a href="https://blog.disqus.com/">Disqus</a>에 접속하여 회원가입합니다.</li>
+</ul>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605330585/post/blog_making/disqus/disqus01_r6dowa.png" alt="6-1-1"></p>
+<ul>
+<li><code>Get Started</code> 버튼을 클릭합니다.</li>
+</ul>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605330586/post/blog_making/disqus/disqus02_v1fyqu.png" alt="6-1-2"></p>
+<ul>
+<li><code>I want to install Disqus on my site</code> 탭을 클릭합니다.</li>
+</ul>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605330586/post/blog_making/disqus/disqus03_bgabd3.png" alt="6-1-3"></p>
+<ul>
+<li>Website Name, Category는 기호에 맞게 설정합니다.</li>
+<li>Language는 현재 한국어 지원이 되지 않으므로 English로 설정합니다.</li>
+</ul>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605330585/post/blog_making/disqus/disqus04_gq9hjj.png" alt="6-1-4"></p>
+<ul>
+<li>Plan은 무료로 사용 가능한 Basic 플랜으로 구독합니다.</li>
+</ul>
+<h2 id="6-2">6-2.</h2>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605330586/post/blog_making/disqus/disqus05_luzpg8.png" alt="6-2-1"></p>
+<ul>
+<li>이 탭을 클릭합니다.Disqus는 Hugo를 지원하지 않아서 코드를 직접 삽입해야 합니다.</li>
+</ul>
+<p><img src="https://res.cloudinary.com/traceofpassion/image/upload/v1605330586/post/blog_making/disqus/disqus06_at6idb.png" alt="6-2-2"></p>
+<ul>
+<li>1번의 내용을 전체 복사합니다.</li>
+</ul>
+<h2 id="6-3">6-3.</h2>
+<ul>
+<li><code>./themes/hugo-tranquilpeak-theme/layouts/partials/post/disqus.html</code>를 메모장을 연결 프로그램으로 하여 오픈합니다.</li>
+<li>6-2에서 복사한 내용을 바꿔서 붙여넣기합니다.</li>
+</ul>
+<pre tabindex="0"><code class="language-{html" data-lang="{html">&lt;div id=&#34;disqus_thread&#34;&gt;&lt;/div&gt;
+&lt;script&gt;
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page&#39;s canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page&#39;s unique identifier variable
+};
+*/
+(function() { // DON&#39;T EDIT BELOW THIS LINE
+var d = document, s = d.createElement(&#39;script&#39;);
+s.src = &#39;https://(본인의 계정 ID).disqus.com/embed.js&#39;;
+s.setAttribute(&#39;data-timestamp&#39;, +new Date());
+(d.head || d.body).appendChild(s);
+})();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&#34;https://disqus.com/?ref_noscript&#34;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+</code></pre><ul>
+<li>다음과 같은 구조로 코드가 이루어져 있습니다.</li>
+</ul>
+<h2 id="6-4">6-4.</h2>
+<pre tabindex="0"><code class="language-{r" data-lang="{r">blogdown::build_site()
+</code></pre><ul>
+<li>Console 창에 코드를 실행하여 블로그를 빌드합니다.</li>
+</ul>
+<pre tabindex="0"><code class="language-{bash" data-lang="{bash">$ cd TestBlog # 본인의 레포지토리 경로
+$ git add .
+$ git commit -m &#34;add disqus&#34;
+$ git push origin master
+</code></pre><ul>
+<li>지금까지의 내용을 Git Bash를 통해 커밋한 후, origin(깃헙)의 master 브랜치에 푸시합니다.</li>
+</ul>
+<h1 id="블로그-시리즈-바로가기httpstraceofpassiongithubiocategoriesebb894eba19ceab7b8"><a href="https://traceofpassion.github.io/categories/%EB%B8%94%EB%A1%9C%EA%B7%B8/">블로그 시리즈 바로가기</a></h1>
+<ul>
+<li><a href="https://traceofpassion.github.io/2020/blog-making-01/">R로 블로그 만들기(1) - Git 설정과 blogdown 패키지 설치</a></li>
+<li><a href="https://traceofpassion.github.io/2020/blog-making-02/">R로 블로그 만들기(2) - config.toml 설정하기</a></li>
+<li><a href="https://traceofpassion.github.io/2020/blog-making-03/">R로 블로그 만들기(3) - Netlify로 사이트 배포하기</a></li>
+</ul>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/">블로그</a>
+
+  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/blogdown/">blogdown</a>
+
+  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/google-analytics/">google analytics</a>
+
+  <a class="tag tag--primary tag--small" href="https://traceofpassion.github.io/tags/disqus/">disqus</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-02/" data-tooltip="R로 블로그 만들기(2) - config.toml 설정하기" aria-label="이전: R로 블로그 만들기(2) - config.toml 설정하기">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">이전</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-05/" data-tooltip="R로 블로그 만들기(5) - 게시글 작성(Posting)과 Cloudinary로 이미지 삽입하기" aria-label="다음: R로 블로그 만들기(5) - 게시글 작성(Posting)과 Cloudinary로 이미지 삽입하기">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">다음</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="게시글 공유하기">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://traceofpassion.github.io/2020/blog-making-04/" title="Facebook에 공유하기" aria-label="Facebook에 공유하기">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://traceofpassion.github.io/2020/blog-making-04/" title="Twitter에 공유하기" aria-label="Twitter에 공유하기">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://traceofpassion.github.io/2020/blog-making-04/" title="Linkedin에 공유하기" aria-label="Linkedin에 공유하기">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="댓글 남기기">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="맨위로 돌아가기">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/traceofpassion.github.io\/2020\/blog-making-04\/';
+        
+          this.page.identifier = '\/2020\/blog-making-04\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'traceofpassion';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 <a href="https://github.com/traceofpassion">H.S Lee</a>. All Rights Reserved
+  </span>
+  <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-02/" data-tooltip="R로 블로그 만들기(2) - config.toml 설정하기" aria-label="이전: R로 블로그 만들기(2) - config.toml 설정하기">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">이전</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://traceofpassion.github.io/2020/blog-making-05/" data-tooltip="R로 블로그 만들기(5) - 게시글 작성(Posting)과 Cloudinary로 이미지 삽입하기" aria-label="다음: R로 블로그 만들기(5) - 게시글 작성(Posting)과 Cloudinary로 이미지 삽입하기">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">다음</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="게시글 공유하기">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://traceofpassion.github.io/2020/blog-making-04/" title="Facebook에 공유하기" aria-label="Facebook에 공유하기">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://traceofpassion.github.io/2020/blog-making-04/" title="Twitter에 공유하기" aria-label="Twitter에 공유하기">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://traceofpassion.github.io/2020/blog-making-04/" title="Linkedin에 공유하기" aria-label="Linkedin에 공유하기">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="댓글 남기기">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="맨위로 돌아가기">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftraceofpassion.github.io%2F2020%2Fblog-making-04%2F" aria-label="Facebook에 공유하기">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Facebook에 공유하기</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ftraceofpassion.github.io%2F2020%2Fblog-making-04%2F" aria-label="Twitter에 공유하기">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Twitter에 공유하기</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftraceofpassion.github.io%2F2020%2Fblog-making-04%2F" aria-label="Linkedin에 공유하기">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Linkedin에 공유하기</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/3ddc124cb979250350948976e5a6728f?s=110" alt="프로필" />
+    
+    <h4 id="about-card-name">H.S Lee</h4>
+    
+      <div id="about-card-bio">It is never wrong to do the right thing.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Data Analyst
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        SK Broadband, Seoul
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    <div id="cover" style="background-image:url('https://res.cloudinary.com/traceofpassion/image/upload/v1605163815/setting/cover_book_bagevu.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://traceofpassion.github.io/js/tranquilpeak.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+<script src="//yihui.org/js/math-code.js"></script>
+<script async
+src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    
+  </body>
+</html>
+

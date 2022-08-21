@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>폰트 on HS-DATABLOG</title>
+    <link>https://traceofpassion.github.io/tags/%ED%8F%B0%ED%8A%B8/</link>
+    <description>Recent content in 폰트 on HS-DATABLOG</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 16 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://traceofpassion.github.io/tags/%ED%8F%B0%ED%8A%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R로 블로그 만들기(6) - 폰트 변경하기</title>
+      <link>https://traceofpassion.github.io/2020/blog-making-06/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://traceofpassion.github.io/2020/blog-making-06/</guid>
+      <description>&lt;p&gt;블로그의 폰트를 설정하는 방법을 소개합니다.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
